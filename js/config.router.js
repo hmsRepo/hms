@@ -120,25 +120,38 @@ angular.module('app')
               })
               .state('app.oper.indents', {
                   url: '/indents',
-                  templateUrl: 'tpl/ui_googlemap.html',
-                  resolve: load(['js/app/map/load-google-maps.js', 'js/app/map/ui-map.js', 'js/app/map/map.js'], function(){ return loadGoogleMaps(); })
+                  templateUrl: 'tpl/materials/indent.html ',
+                  /*resolve: load(['js/app/map/load-google-maps.js', 'js/app/map/ui-map.js', 'js/app/map/map.js'], function(){ return loadGoogleMaps(); })*/
               })
-              .state('app.oper.dept-requist', {
+               .state('app.oper.indentsview', {
+                  url: '/indentsview',
+                  templateUrl: 'tpl/materials/indentView.html ',
+                  
+              })
+              .state('app.oper.dept-requist', { 
                   url: '/department',
                   templateUrl: 'tpl/ui_chart.html',
                   resolve: load('js/controllers/chart.js')
               })
-              .state('app.oper.purchase-order', {
-                  url: '/purchase-order',
-                  template: '<div ui-view></div>'
+              .state('app.oper.purchase-orderview', {
+                  url: '/purchase-orderview',
+                  templateUrl: 'tpl/materials/purchaseOrderView.html'
               })
-              .state('app.oper.receipts', {
-                  url: '/receipts',
-                  templateUrl: 'tpl/table_static.html'
+              .state('app.oper.purchase-orderAdd', {
+                  url: '/purchase-orderAdd',
+                  templateUrl: 'tpl/materials/purchaseOrderAdd.html',
+              })
+              .state('app.oper.receiptsView', {
+                  url: '/receiptsView',
+                  templateUrl: 'tpl/materials/receiptView.html',
+              })
+               .state('app.oper.receiptsAdd', {
+                  url: '/receiptsAdd',
+                  templateUrl: 'tpl/materials/receiptAdd.html',
               })
               .state('app.oper.receipt-returns', {
                   url: '/receipt-returns',
-                  templateUrl: 'tpl/table_datatable.html'
+                  templateUrl: 'tpl/materials/receiptReturns.html',
               })
               .state('app.oper.store-issues', {
                   url: '/store-issues',
