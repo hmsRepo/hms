@@ -146,8 +146,8 @@ angular.module('app')
               })
               .state('app.oper.issues', {
                   url: '/issues',
-                  templateUrl: 'tpl/table_grid.html',
-                  resolve: load(['ngGrid','js/controllers/grid.js'])
+                  templateUrl: 'tpl/operation/issue.html',
+                  resolve: load(['smart-table'])
               })
               .state('app.oper.issue-return', {
                   url: '/issue-return',
