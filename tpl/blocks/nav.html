@@ -1,450 +1,196 @@
 <!-- list -->
 <ul class="nav">
-  <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
-    <span translate="aside.nav.HEADER">Navigation</span>
-  </li>
-  <li>
+  <!-- <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
+    <span translate="aside.nav.HEADER">HMS</span>
+  </li> -->
+   <li ng-class="{active:$state.includes('app.materialss')}">
     <a href class="auto">      
       <span class="pull-right text-muted">
         <i class="fa fa-fw fa-angle-right text"></i>
         <i class="fa fa-fw fa-angle-down text-active"></i>
       </span>
       <i class="glyphicon glyphicon-stats icon text-primary-dker"></i>
-      <span class="font-bold" translate="aside.nav.DASHBOARD">Dashboard</span>
+      <span class="font-bold" >Materials</span>
     </a>
     <ul class="nav nav-sub dk">
       <li class="nav-sub-header">
         <a href>
-          <span translate="aside.nav.DASHBOARD">Dashboard</span>
+          <span >Materials</span>
         </a>
       </li>
       <li ui-sref-active="active">
-        <a ui-sref="app.dashboard-v1">
-          <span>Dashboard v1</span>
+        <a ui-sref="app.mat.stores">
+          <span>Stores</span>
         </a>
       </li>
       <li ui-sref-active="active">
-        <a ui-sref="app.dashboard-v2">
-          <b class="label bg-info pull-right">N</b>
-          <span>Dashboard v2</span>
+        <a ui-sref="app.mat.groups">
+          <span>Groups</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.mat.uom">
+          <span>UOM</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.mat.cost-centre">
+          <span>CostCentre</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.mat.item-master">
+          <span>Item Master(stores)</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.mat.supplier-master">
+          <span>Supplier Master(stores)</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.mat.taxcode">
+          <span>Tax Code</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.mat.tax-structure">
+          <span>Tax Structure(stores)</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.mat.template-master">
+          <span>Item Template Master</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.mat.store-parameters">
+          <span>Store Paremeters</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.mat.subcost-centre">
+          <span>SubCostCentre</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.mat.standing-po">
+          <span>Standind PO</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.mat.access-rights">
+          <span>Stores Access Rights</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.mat.sub-groups">
+          <span>Sub-Groups</span>
         </a>
       </li>
     </ul>
   </li>
-   <li>
+   <li ng-class="{active:$state.includes('app.oper')}">
     <a href class="auto">      
-      <span class="pull-right text-muted">
-        <i class="fa fa-fw fa-angle-right text"></i>
-        <i class="fa fa-fw fa-angle-down text-active"></i>
-      </span>
-      <i class="glyphicon glyphicon-stats icon text-primary-dker"></i>
-      <span class="font-bold" translate="">Materials</span>
-    </a>
-    <ul class="nav nav-sub dk">
-      <li class="nav-sub-header">
-        <a href>
-          <span translate="">Materials</span>
-        </a>
-      </li>
-      <li ui-sref-active="active">
-        <a ui-sref="app.indent">
-          <span>Indent</span>
-        </a>
-      </li>
-    </ul>
-  </li>
-  <li ui-sref-active="active">
-    <a ui-sref="app.calendar">
-      <i class="glyphicon glyphicon-calendar icon text-info-dker"></i>
-      <span class="font-bold" translate="aside.nav.CALENDAR">Calendar</span>
-    </a>
-  </li>
-  <li ui-sref-active="active">
-    <a ui-sref="app.mail.list">
-      <b class="badge bg-info pull-right">9</b>
-      <i class="glyphicon glyphicon-envelope icon text-info-lter"></i>
-      <span class="font-bold" translate="aside.nav.EMAIL">Email</span>
-    </a>
-  </li>
-  <li>
-    <a href class="auto">
-      <span class="pull-right text-muted">
-        <i class="fa fa-fw fa-angle-right text"></i>
-        <i class="fa fa-fw fa-angle-down text-active"></i>
-      </span>
-      <i class="glyphicon glyphicon-th-large icon text-success"></i>
-      <span class="font-bold">Apps</span>
-    </a>
-    <ul class="nav nav-sub dk">
-      <li class="nav-sub-header">
-        <a href>
-          <span>Apps</span>
-        </a>
-      </li>
-      <li ui-sref-active="active">
-        <a ui-sref="app.todo">
-          <span>Todo</span>
-        </a>
-      </li>
-      <li ui-sref-active="active">
-        <a ui-sref="apps.note">
-          <span>Note</span>
-        </a>
-      </li>
-      <li ui-sref-active="active">
-        <a ui-sref="apps.contact">
-          <span>Contacts</span>
-        </a>
-      </li>
-      <li ui-sref-active="active">
-        <a ui-sref="app.weather">
-          <span>Weather</span>
-        </a>
-      </li>
-    </ul>
-  </li>
-
-  <li class="line dk"></li>
-
-  <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
-    <span translate="aside.nav.components.COMPONENTS">Components</span>
-  </li>
-  <li>
-    <a href class="auto">      
-      <span class="pull-right text-muted">
-        <i class="fa fa-fw fa-angle-right text"></i>
-        <i class="fa fa-fw fa-angle-down text-active"></i>
-      </span>
-      <b class="badge bg-info pull-right">3</b>
-      <i class="glyphicon glyphicon-th"></i>
-      <span>Layout</span>
-    </a>
-    <ul class="nav nav-sub dk">
-      <li class="nav-sub-header">
-        <a href>
-          <span>Layout</span>
-        </a>
-      </li>
-      <li ui-sref-active="active">
-        <a ui-sref="layout.app">
-          <span>Application</span>
-        </a>
-      </li>
-      <li ui-sref-active="active">
-        <a ui-sref="layout.fullwidth">
-          <span>Full width</span>
-        </a>
-      </li>
-      <li ui-sref-active="active">
-        <a ui-sref="layout.mobile">
-          <span>Mobile</span>
-        </a>
-      </li>      
-    </ul>
-  </li>
-  <li ng-class="{active:$state.includes('app.ui')}">
-    <a href class="auto">
-      <span class="pull-right text-muted">
-        <i class="fa fa-fw fa-angle-right text"></i>
-        <i class="fa fa-fw fa-angle-down text-active"></i>
-      </span>
-      <i class="glyphicon glyphicon-briefcase icon"></i>
-      <span translate="aside.nav.components.ui_kits.UI_KITS">UI Kits</span>
-    </a>
-    <ul class="nav nav-sub dk">
-      <li class="nav-sub-header">
-        <a href>
-          <span translate="aside.nav.components.ui_kits.UI_KITS">UI Kits</span>
-        </a>
-      </li>
-      <li ui-sref-active="active">
-        <a ui-sref="app.ui.buttons">
-          <span translate="aside.nav.components.ui_kits.BUTTONS">Buttons</span>
-        </a>
-      </li>
-      <li ui-sref-active="active">
-        <a ui-sref="app.ui.icons">
-          <b class="badge bg-info pull-right">3</b>
-          <span translate="aside.nav.components.ui_kits.ICONS">Icons</span>
-        </a>
-      </li>
-      <li ui-sref-active="active">
-        <a ui-sref="app.ui.grid">
-          <span translate="aside.nav.components.ui_kits.GRID">Grid</span>
-        </a>
-      </li>
-      <li ui-sref-active="active">
-        <a ui-sref="app.ui.widgets">
-          <b class="badge bg-success pull-right">13</b>
-          <span translate="aside.nav.WIDGETS">Widgets</span>
-        </a>
-      </li>
-      <li ui-sref-active="active">
-        <a ui-sref="app.ui.bootstrap">
-          <b class="badge bg-primary pull-right">16</b>
-          <span translate="aside.nav.components.ui_kits.BOOTSTRAP">Bootstrap</span>
-        </a>
-      </li>
-      <li ui-sref-active="active">
-        <a ui-sref="app.ui.sortable">
-          <span translate="aside.nav.components.ui_kits.SORTABLE">Sortable</span>
-        </a>
-      </li>
-      <li ui-sref-active="active">
-        <a ui-sref="app.ui.scroll">
-          <span>Scroll</span>
-        </a>
-      </li>
-      <li ui-sref-active="active">
-        <a ui-sref="app.ui.portlet">
-          <span translate="aside.nav.components.ui_kits.PORTLET">Portlet</span>
-        </a>
-      </li>
-      <li ui-sref-active="active">
-        <a ui-sref="app.ui.timeline">
-          <span translate="aside.nav.components.ui_kits.TIMELINE">Timeline</span>
-        </a>
-      </li>
-      <li ui-sref-active="active">
-        <a ui-sref="app.ui.tree">
-          <span>Tree</span>
-        </a>
-      </li>
-      <li ui-sref-active="active">
-        <a ui-sref="app.ui.toaster">
-          <span>Toaster</span>
-        </a>
-      </li>
-      <li>
-        <a href class="auto">
-          <span class="pull-right text-muted">
-            <i class="fa fa-fw fa-angle-right text"></i>
-            <i class="fa fa-fw fa-angle-down text-active"></i>
-          </span>
-          <b class="label bg-info pull-right">2</b>
-          <span>Maps</span>
-        </a>
-        <ul class="nav dker">
-          <li ui-sref-active="active">
-            <a ui-sref="app.ui.jvectormap">
-              <span translate="aside.nav.components.ui_kits.VECTOR_MAP">Vector Map</span>
-            </a>
-          </li>
-          <li ui-sref-active="active">
-            <a ui-sref="app.ui.googlemap">
-              <span>Google Map</span>
-            </a>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li ng-class="{active:$state.includes('app.table')}">
-    <a href class="auto">
-      <span class="pull-right text-muted">
-        <i class="fa fa-fw fa-angle-right text"></i>
-        <i class="fa fa-fw fa-angle-down text-active"></i>
-      </span>
-      <b class="label bg-primary pull-right">2</b>
-      <i class="glyphicon glyphicon-list"></i>
-      <span translate="aside.nav.components.table.TABLE">Table</span>
-    </a>
-    <ul class="nav nav-sub dk">
-      <li class="nav-sub-header">
-        <a href>
-          <span translate="aside.nav.components.table.TABLE">Table</span>
-        </a>
-      </li>
-      <li ui-sref-active="active">
-        <a ui-sref="app.table.static">
-          <span translate="aside.nav.components.table.TABLE_STATIC">Table static</span>
-        </a>
-      </li>
-      <li ui-sref-active="active">
-        <a ui-sref="app.table.datatable">
-          <span translate="aside.nav.components.table.DATATABLE">Datatable</span>
-        </a>
-      </li>
-      <li ui-sref-active="active">
-        <a ui-sref="app.table.footable">
-          <span translate="aside.nav.components.table.FOOTABLE">Footable</span>
-        </a>
-      </li>
-      <li ui-sref-active="active">
-        <a ui-sref="app.table.grid">
-          <span>ngGrid</span>
-        </a>
-      </li>
-      <li ui-sref-active="active">
-        <a ui-sref="app.table.uigrid">
-          <span>uiGrid</span>
-        </a>
-      </li>
-      <li ui-sref-active="active">
-        <a ui-sref="app.table.smart">
-          <span>Smart table</span>
-        </a>
-      </li>
-      <li ui-sref-active="active">
-        <a ui-sref="app.table.editable">
-          <span>Editable</span>
-        </a>
-      </li>
-    </ul>
-  </li>
-  <li ng-class="{active:$state.includes('app.form')}">
-    <a href class="auto">
       <span class="pull-right text-muted">
         <i class="fa fa-fw fa-angle-right text"></i>
         <i class="fa fa-fw fa-angle-down text-active"></i>
       </span>
       <i class="glyphicon glyphicon-edit"></i>
-      <span translate="aside.nav.components.form.FORM">Form</span>
+      <span class="font-bold" translate="">Operations</span>
     </a>
     <ul class="nav nav-sub dk">
       <li class="nav-sub-header">
         <a href>
-          <span translate="aside.nav.components.form.FORM">Form</span>
+          <span translate="">Operations</span>
         </a>
       </li>
       <li ui-sref-active="active">
-        <a ui-sref="app.form.elements">
-          <span translate="aside.nav.components.form.FORM_ELEMENTS">Form elements</span>
+        <a ui-sref="app.oper.item-template">
+          <span>Item Template</span>
         </a>
       </li>
       <li ui-sref-active="active">
-        <a ui-sref="app.form.validation">
-          <span translate="aside.nav.components.form.FORM_VALIDATION">Form validation</span>
+        <a ui-sref="app.oper.indents">
+          <span>Indents</span>
         </a>
       </li>
       <li ui-sref-active="active">
-        <a ui-sref="app.form.wizard">
-          <span translate="aside.nav.components.form.FORM_WIZARD">Form wizard</span>
+        <a ui-sref="app.oper.dept-requist">
+          <span>Department Requistition</span>
         </a>
       </li>
       <li ui-sref-active="active">
-        <a ui-sref="app.form.fileupload">
-          <span>File upload</span>
+        <a ui-sref="app.oper.purchase-order">
+          <span>Purchase Order</span>
         </a>
       </li>
       <li ui-sref-active="active">
-        <a ui-sref="app.form.imagecrop">
-          <span>Image crop</span>
+        <a ui-sref="app.oper.receipts">
+          <span>Receipts</span>
         </a>
       </li>
       <li ui-sref-active="active">
-        <a ui-sref="app.form.select">
-          <span>Select</span>
+        <a ui-sref="app.oper.receipt-returns">
+          <span>Receipts Returns</span>
         </a>
       </li>
       <li ui-sref-active="active">
-        <a ui-sref="app.form.slider">
-          <span>Slider</span>
+        <a ui-sref="app.oper.store-issues">
+          <span>Storewise Issues</span>
         </a>
       </li>
       <li ui-sref-active="active">
-        <a ui-sref="app.form.editor">
-          <span>Editor</span>
+        <a ui-sref="app.oper.issues">
+          <span>Issues</span>
         </a>
       </li>
       <li ui-sref-active="active">
-        <a ui-sref="app.form.xeditable">
-          <span>Xeditable</span>
+        <a ui-sref="app.oper.issue-return">
+          <span>Issues Returns</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.oper.adjustment">
+          <span>Adjustments</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.oper.physical-entity">
+          <span>Physical Stock Entry(WA)</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.oper.phy-entity-fifo">
+          <span>Physical Stock Entry(FIFO/LIFO)</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.oper.month-end-closing">
+          <span>Month End Closing</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.oper.purchase-invoice">
+          <span>Purchase Invoice</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.oper.close-indents">
+          <span>Close Indents</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.oper.dir-receipt">
+          <span>DIR Receipts</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.oper.supplier-merge">
+          <span>Supplier Merge</span>
         </a>
       </li>
     </ul>
-  </li>
-  <li ui-sref-active="active">
-    <a ui-sref="app.chart">
-      <i class="glyphicon glyphicon-signal"></i>
-      <span translate="aside.nav.components.CHART">Chart</span>
-    </a>
-  </li>
-  <li ng-class="{active:$state.includes('app.page')}">
-    <a href class="auto">
-      <span class="pull-right text-muted">
-        <i class="fa fa-fw fa-angle-right text"></i>
-        <i class="fa fa-fw fa-angle-down text-active"></i>
-      </span>
-      <i class="glyphicon glyphicon-file icon"></i>
-      <span translate="aside.nav.components.pages.PAGES">Pages</span>
-    </a>
-    <ul class="nav nav-sub dk">
-      <li class="nav-sub-header">
-        <a href>
-          <span translate="aside.nav.components.pages.PAGES">Pages</span>
-        </a>
-      </li>
-      <li ui-sref-active="active">
-        <a ui-sref="app.page.profile">
-          <span translate="aside.nav.components.pages.PROFILE">Profile</span>
-        </a>
-      </li>
-      <li ui-sref-active="active">
-        <a ui-sref="app.page.post">
-          <span translate="aside.nav.components.pages.POST">Post</span>
-        </a>
-      </li>
-      <li ui-sref-active="active">
-        <a ui-sref="app.page.search">
-          <span translate="aside.nav.components.pages.SEARCH">Search</span>
-        </a>
-      </li>
-      <li ui-sref-active="active">
-        <a ui-sref="app.page.invoice">
-          <span translate="aside.nav.components.pages.INVOICE">Invoice</span>
-        </a>
-      </li>
-      <li ui-sref-active="active">
-        <a ui-sref="app.page.price">
-          <span>Price</span>
-        </a>
-      </li>
-      <li>
-        <a ui-sref="lockme">
-          <span translate="aside.nav.components.pages.LOCK_SCREEN">Lock screen</span>
-        </a>
-      </li>
-      <li>
-        <a ui-sref="access.signin">
-          <span translate="aside.nav.components.pages.SIGNIN">Signin</span>
-        </a>
-      </li>
-      <li>
-        <a ui-sref="access.signup">
-          <span translate="aside.nav.components.pages.SIGNUP">Signup</span>
-        </a>
-      </li>
-      <li>
-        <a ui-sref="access.forgotpwd">
-          <span translate="aside.nav.components.pages.FORGOT_PASSWORD">Forgot password</span>
-        </a>
-      </li>
-      <li>
-        <a ui-sref="access.404">
-          <span translate="aside.nav.components.pages.404">404</span>
-        </a>
-      </li>
-    </ul>
-  </li>
-
-  <li class="line dk hidden-folded"></li>
-
-  <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">          
-    <span translate="aside.nav.your_stuff.YOUR_STUFF">Your Stuff</span>
-  </li>  
-  <li>
-    <a ui-sref="app.page.profile">
-      <i class="icon-user icon text-success-lter"></i>
-      <b class="badge bg-success pull-right">30%</b>
-      <span translate="aside.nav.your_stuff.PROFILE">Profile</span>
-    </a>
-  </li>
-  <li>
-    <a ui-sref="app.docs">
-      <i class="icon-question icon"></i>
-      <span translate="aside.nav.your_stuff.DOCUMENTS">Documents</span>
-    </a>
   </li>
 </ul>
 <!-- / list -->

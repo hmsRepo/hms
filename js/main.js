@@ -12,7 +12,7 @@ angular.module('app')
 
       // config
       $scope.app = {
-        name: 'Angulr',
+        name: 'HMS',
         version: '2.2.0',
         // for chart colors
         color: {
@@ -27,7 +27,8 @@ angular.module('app')
         },
         settings: {
           themeID: 1,
-          navbarHeaderColor: 'bg-black',
+          // navbarHeaderColor: 'bg-black',
+          navbarHeaderColor: 'bg-info',
           navbarCollapseColor: 'bg-white-only',
           asideColor: 'bg-black',
           headerFixed: true,
