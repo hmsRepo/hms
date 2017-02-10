@@ -1,0 +1,139 @@
+<style type="text/css">
+  .breadcrumbWidth{
+    height: 70px;
+  }
+</style>
+<div class="bg-light lter b-b wrapper-md breadcrumbWidth">
+  <div class="row">
+    <div class="col-md-4">
+      <h4 class="m-n font-thin h4"></i><b>HMS</b> | Opearations</h4>
+    </div>
+    <div class="col-md-8">
+      <ul class="breadcrumb pull-right">
+        <li><a href=""><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="">Operations</a></li>
+        <li class="active">Adjustment</li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="wrapper-md">
+  <div class="panel panel-default">
+    <div class="panel-heading font-bold">Adjustment</div>
+    <div class="panel-body">
+      
+      <form class="form_validation">
+        <div class="row">
+          <div class="row col-md-12" >
+            <div class="form-group col-md-1"></div>
+            <div class="form-group col-md-3">
+              <label>Store</label>
+              <input class="form-control input-sm">
+            </div>
+            <div class="form-group col-md-4">
+              <label>&nbsp;</label>
+              <input class="form-control input-sm">
+            </div>
+            <div class="form-group col-md-3">
+              <label>Date</label>
+              <input class="form-control input-sm">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="row col-md-12" >
+            <div class="form-group col-md-1"></div>
+            <div class="form-group col-md-3">
+              <label>Doc Date</label>
+              <input class="form-control input-sm">
+            </div>
+            <div class="form-group col-md-4">
+              <label>Srl#</label>
+              <input class="form-control input-sm">
+            </div>
+            <div class="form-group col-md-3">
+              <label>Quantity</label>
+              <input class="form-control input-sm">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="row col-md-12" >
+            <div class="form-group col-md-1"></div>
+            <div class="form-group col-md-3">
+              <label>Item Code</label>
+              <input class="form-control input-sm">
+            </div>
+            <div class="form-group col-md-4">
+              <label>&nbsp;</label>
+              <input class="form-control input-sm">
+            </div>
+            <div class="form-group col-md-3">
+              <label>UOM</label>
+              <input class="form-control input-sm">
+            </div>
+          </div>
+        </div> 
+        <div class="row">
+          <div class="row col-md-12" >
+            <div class="form-group col-md-1"></div>
+            <div class="form-group col-md-3">
+              <label>Balance</label>
+              <input class="form-control input-sm">
+            </div>
+            <div class="form-group col-md-2">
+              <label>Rate</label>
+              <input class="form-control input-sm">
+            </div>
+            <div class="form-group col-md-2">
+              <label>Value</label>
+              <input class="form-control input-sm">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="row col-md-12" >
+            <div class="form-group col-md-1"></div>
+            <div class="form-group col-md-3">
+              <label>Reference</label>
+              <input class="form-control input-sm">
+            </div>
+            <div class="form-group col-md-4">
+              <label>Remark</label>
+              <input class="form-control input-sm">
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <table st-table="rowCollectionBasic" class="table table-bordered table-striped">
+        <thead>
+        <tr style="background-color: rgb(237,241,242);">
+          <th>S.No</th>
+          <th>Item Code</th>
+          <th>Item Name</th>
+          <th>UOM</th>
+          <th>value</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="row in rowCollectionBasic" st-select-row="row">
+          <td>{{row.Sno}}</td>
+          <td>{{row.itemcode}}</td>
+          <td>{{row.itemname}}</td>
+          <td>{{row.uom}}</td>
+          <td>{{row.value}}</td>
+        </tr>
+        </tbody>
+      </table>
+
+      <div class="form-group">        
+        <div class="col-sm-offset-5">
+          <button type="submit" class="btn btn-danger" ui-sref="app.oper.adjustment">Cancel</button>
+          <button type="submit" class="btn btn-success">Save</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -174,6 +174,20 @@ angular.module('app')
           files: [
               'libs/angular/angular-skycons/angular-skycons.js'
           ]
+      },
+      // added by Vijayaraj 10-02-17
+      {
+          name: 'ngBootbox',
+          files: [
+              'libs/angular/angular-bootbox/bootbox.js',
+              'libs/angular/angular-bootbox/ngBootbox.js'
+          ]
+      },
+      {
+          name: 'ui.bootstrap',
+          files: [
+              'libs/angular/angular-bootstrap/ui-bootstrap-tpls.js'
+          ]
       }
     ]
   )

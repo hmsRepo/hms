@@ -160,33 +160,61 @@ angular.module('app')
               .state('app.oper.issues', {
                   url: '/issues',
                   templateUrl: 'tpl/operation/issue.html',
-                  resolve: load(['smart-table'])
+                  controller: 'IssueCtrl',
+                  resolve: load(['smart-table','ui.bootstrap','toaster','ngBootbox','js/controllers/operations/issue.js'])
+              })
+              .state('app.oper.addissue', {
+                  url: '/add-issues',
+                  templateUrl: 'tpl/operation/add_issue.html',
+                  controller: 'IssueCtrl',
+                  resolve: load(['smart-table','ui.bootstrap','toaster','ngBootbox','js/controllers/operations/issue.js'])
               })
               .state('app.oper.issue-return', {
                   url: '/issue-return',
-                  templateUrl: 'tpl/table_uigrid.html',
-                  resolve: load(['ui.grid','js/controllers/uigrid.js'])
+                  templateUrl: 'tpl/operation/issue_return.html',
+                  controller: 'IssueCtrl',
+                  resolve: load(['smart-table','ui.bootstrap','toaster','ngBootbox','js/controllers/operations/issue.js'])
+              })
+              .state('app.oper.addissue-return', {
+                  url: '/issue-return',
+                  templateUrl: 'tpl/operation/add_issue_return.html',
+                  controller: 'IssueCtrl',
+                  resolve: load(['smart-table','ui.bootstrap','toaster','ngBootbox','js/controllers/operations/issue.js'])
               })
               .state('app.oper.adjustment', {
                   url: '/adjustment',
-                  templateUrl: 'tpl/table_editable.html',
-                  controller: 'XeditableCtrl',
-                  resolve: load(['xeditable','js/controllers/xeditable.js'])
+                  templateUrl: 'tpl/operation/adjustment.html',
+                  controller: 'IssueCtrl',
+                  resolve: load(['smart-table','ui.bootstrap','toaster','ngBootbox','js/controllers/operations/issue.js'])
               })
-              .state('app.oper.physical-entity', {
+              .state('app.oper.add-adjustment', {
+                  url: '/add-adjustment',
+                  templateUrl: 'tpl/operation/adjustment_add.html',
+                  controller: 'IssueCtrl',
+                  resolve: load(['smart-table','ui.bootstrap','toaster','ngBootbox','js/controllers/operations/issue.js'])
+              })
+              .state('app.oper.physical-entry', {
                   url: '/physical-entity',
-                  templateUrl: 'tpl/table_smart.html',
-                  resolve: load(['smart-table','js/controllers/table.js'])
+                  templateUrl: 'tpl/operation/physical_stock.html',
+                  controller: 'IssueCtrl',
+                  resolve: load(['smart-table','ui.bootstrap','toaster','ngBootbox','js/controllers/operations/issue.js'])
               })
-              .state('app.oper.phy-entity-fifo', {
+              .state('app.oper.physical-entry-add', {
+                  url: '/add-physical-entity',
+                  templateUrl: 'tpl/operation/physical_stock_add.html',
+                  controller: 'IssueCtrl',
+                  resolve: load(['smart-table','ui.bootstrap','toaster','ngBootbox','js/controllers/operations/issue.js'])
+              })
+              .state('app.oper.phy-entry-fifo', {
                   url: '/physical-entity',
                   template: '<div ui-view class="fade-in"></div>',
                   resolve: load('js/controllers/form.js')
               })
               .state('app.oper.month-end-closing', {
                   url: '/month-end-closing',
-                  templateUrl: 'tpl/form_components.html',
-                  resolve: load(['ngBootstrap','daterangepicker','js/controllers/form.components.js'])
+                  templateUrl: 'tpl/operation/month_end.html',
+                  controller: 'IssueCtrl',
+                  resolve: load(['smart-table','ui.bootstrap','toaster','ngBootbox','js/controllers/operations/issue.js'])
               })
               .state('app.oper.purchase-invoice', {
                   url: '/purchase-invoice',

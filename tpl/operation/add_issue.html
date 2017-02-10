@@ -1,0 +1,88 @@
+<style type="text/css">
+  .breadcrumbWidth{
+    height: 70px;
+  }
+</style>
+<div class="bg-light lter b-b wrapper-md breadcrumbWidth">
+  <div class="row">
+    <div class="col-md-4">
+      <h4 class="m-n font-thin h4"></i><b>HMS</b> | Opearations</h4>
+    </div>
+    <div class="col-md-8">
+      <ul class="breadcrumb pull-right">
+        <li><a href=""><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="">Operations</a></li>
+        <li class="active">Issue</li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="wrapper-md">
+  <div class="panel panel-default">
+    <div class="panel-heading font-bold">Issue</div>
+    <div class="panel-body">
+      <form class="form-horizontal">
+        <div class="form-group">
+          <label class="control-label col-sm-2">Indent No:</label>
+          <div class="col-sm-3">
+            <input type="text" class="form-control" placeholder="1234567">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2">Cost Center:</label>
+          <div>
+            <div class="col-sm-3 col-md-3">          
+              <input type="text" class="form-control" placeholder="MK">
+            </div>
+            <div class="col-sm-3 col-md-3">          
+              <input type="text" class="form-control" placeholder="MAIN KITCHEN">
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2">Indent Date:</label>
+          <div class="col-sm-3">          
+            <input type="text" class="form-control" placeholder="01/01/2017">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="pwd">Issue Date:</label>
+          <div class="col-sm-3">          
+            <input type="text" class="form-control" placeholder="31/01/2017">
+          </div>
+        </div>
+      </form>
+
+      <table st-table="rowCollectionBasic" class="table table-bordered table-striped">
+        <thead>
+        <tr style="background-color: rgb(237,241,242);">
+          <th>S.No</th>
+          <th>Item Code</th>
+          <th>Item Name</th>
+          <th>UOM</th>
+          <th>Ind.Qty</th>
+          <th>Store Code</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr st-select-row="row">
+          <td>1</td>
+          <td>15230</td>
+          <td>CAKE BOARD 1/2 KG</td>
+          <td>NOS</td>
+          <td>10.000</td>
+          <td>GNS</td>
+        </tr>
+        </tbody>
+      </table>
+
+      <div class="form-group">        
+        <div class="col-sm-offset-5">
+          <button type="submit" class="btn btn-danger" ui-sref="app.oper.issues">Cancel</button>
+          <button type="submit" class="btn btn-success">Save</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
