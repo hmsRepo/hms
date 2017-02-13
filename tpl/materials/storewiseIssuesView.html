@@ -31,7 +31,7 @@
   <toaster-container toaster-options="{'position-class': 'toast-top-right', 'close-button':true}"></toaster-container>
     <div class="panel panel-default">
     <div class="panel-heading" style="padding:19px;"><span style="font-size:18px;"><b>View Storewise Issues</b></span>  
-    <a ui-sref="app.oper.store-issuesAdd" class="btn btn-success m-b-sm"  style="float: right !important;margin-top:-5px;"><i class="fa fa-plus"></i> Add Issues</a></div>
+    <a ui-sref="app.oper.store-issuesAdd" class="btn btn-success m-b-sm"  style="float: right !important;margin-top:-5px;"><i class="fa fa-plus"></i> Add Store Issues</a></div>
     <table class="table table-striped" st-table="displayedCollection" st-safe-src="rowCollection" style="border-bottom: 1px solid #cfdadd;">
       <tr>
           <th style="width:185px !important">
@@ -71,10 +71,10 @@
               <input st-search="''" placeholder="search for indent date" class="input-sm form-control" type="search"/>
             </th>
             <th>
-              <input st-search="''" placeholder="search for Authorised by" class="input-sm form-control" type="search"/>
+              <input st-search="''" placeholder="search for Issue Date" class="input-sm form-control" type="search"/>
             </th>
             <th>
-              <input st-search="''" placeholder="search for Remarks" class="input-sm form-control" type="search"/>
+              <input st-search="''" placeholder="search for Quantity" class="input-sm form-control" type="search"/>
             </th>
           <!--   <th>
               <st-select-multiple collection="rowCollection" predicate=""></st-select-multiple>
@@ -97,10 +97,11 @@
         <tbody ng-hide="isLoading">
           <tr>
             <td ><label class="i-checks m-b-none"><input type="checkbox" name="post[]" ng-model="post[$index]" ng-value="$index" ng-change="callbackfunction()"><i></i></label></td>
+            <td>STORE</td> 
             <td>IND02</td> 
             <td>06/02/2017</td>
-            <td>Hms</td>
-            <td>Remarks text</td>
+            <td>24/02/2017</td>
+            <td>243.00</td>
             <td style="white-space: nowrap">
               <div class="buttons" ng-show="!rowform.$visible">
                 <button class="btn btn-sm btn-info" data-toggle="modal" data-target="#myModal" ng-click="EditClass(row)"><i class="fa fa-edit"></i></button>
