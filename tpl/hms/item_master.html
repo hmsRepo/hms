@@ -1,0 +1,222 @@
+<div class="bg-light lter b-b wrapper-md">
+  <h1 class="m-n font-thin h3">Item Master</h1>
+</div>
+<div class="wrapper-md" >
+<!--   <div class="row">
+    <div class="col-sm-12"> -->
+      <div class="panel panel-primary">
+        <div class="panel-heading font-bold">Item Master</div>
+        <div class="panel-body">
+          <form role="form">
+            <div class="row">
+              <div class="col-sm-3">
+                <div class="form-group">
+                  <label>Item Code</label>
+                  <input type="text" class="form-control" placeholder="Enter Item code">
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="form-group">
+                  <label>Item Name</label>
+                  <input type="text" class="form-control" placeholder="Enter Item Name">
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="form-group checkbox">
+                  <!-- <label>Type </label> -->
+                  <br>
+                  <label class="i-checks">
+                    <input class="" type="checkbox" checked ><i></i> Stockable
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-3">
+                <div class="form-group">
+                  <label>Group</label>
+                    <ui-select ng-model="group.selected" theme="bootstrap">
+                      <ui-select-match placeholder="Select Group ...">{{$select.selected.name}}</ui-select-match>
+                      <ui-select-choices repeat="item in group | filter: $select.search">
+                        <div ng-bind-html="item.name | highlight: $select.search"></div>
+                        <!-- <small ng-bind-html="item.email | highlight: $select.search"></small> -->
+                      </ui-select-choices>
+                    </ui-select>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="form-group">
+                  <label>Sub-Group</label>
+                    <ui-select ng-model="subGroup.selected" theme="bootstrap">
+                      <ui-select-match placeholder="Select Sub-Group ...">{{$select.selected.name}}</ui-select-match>
+                      <ui-select-choices repeat="item in subGroup | filter: $select.search">
+                        <div ng-bind-html="item.name | highlight: $select.search"></div>
+                        <!-- <small ng-bind-html="item.email | highlight: $select.search"></small> -->
+                      </ui-select-choices>
+                    </ui-select>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="form-group">
+                  <label>UOM</label>
+                    <ui-select ng-model="UOM.selected" theme="bootstrap">
+                      <ui-select-match placeholder="Select UOM ...">{{$select.selected.name}}</ui-select-match>
+                      <ui-select-choices repeat="item in UOM | filter: $select.search">
+                        <div ng-bind-html="item.name | highlight: $select.search"></div>
+                        <!-- <small ng-bind-html="item.email | highlight: $select.search"></small> -->
+                      </ui-select-choices>
+                    </ui-select>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-3">
+                <div class="form-group">
+                  <label>Conv. Factor</label>
+                    <input type="text" class="form-control" placeholder="Enter Conv. Factor">
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="form-group">
+                  <label>Conv. UOM</label>
+                    <ui-select ng-model="ConvUOM.selected" theme="bootstrap">
+                      <ui-select-match placeholder="Select Conv UOM ...">{{$select.selected.name}}</ui-select-match>
+                      <ui-select-choices repeat="item in ConvUOM | filter: $select.search">
+                        <div ng-bind-html="item.name | highlight: $select.search"></div>
+                        <!-- <small ng-bind-html="item.email | highlight: $select.search"></small> -->
+                      </ui-select-choices>
+                    </ui-select>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="form-group">
+                  <label>RECP UOM</label>
+                    <ui-select ng-model="RECPUOM.selected" theme="bootstrap">
+                      <ui-select-match placeholder="Select RECP UOM ...">{{$select.selected.name}}</ui-select-match>
+                      <ui-select-choices repeat="item in RECPUOM | filter: $select.search">
+                        <div ng-bind-html="item.name | highlight: $select.search"></div>
+                        <!-- <small ng-bind-html="item.email | highlight: $select.search"></small> -->
+                      </ui-select-choices>
+                    </ui-select>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-3">
+                <div class="form-group">
+                  <label>Stores</label>
+                    <!-- <ui-select ng-model="Stores.selected" theme="bootstrap" multiple>
+                      <ui-select-match placeholder="Select Stores ...">{{$select.selected.name}}</ui-select-match>
+                      <ui-select-choices repeat="item in Stores | filter: $select.search">
+                        <div ng-bind-html="item.name | highlight: $select.search"></div>
+                        <!-- <small ng-bind-html="item.email | highlight: $select.search"></small> 
+                      </ui-select-choices>
+                    </ui-select>-->
+                    <ui-select multiple ng-model="multipleDemo.selectedPeopleWithGroupBy" theme="bootstrap" ng-disabled="disabled">
+                      <ui-select-match placeholder="Select Stores...">{{$item.name}} </ui-select-match>
+                      <ui-select-choices group-by="someGroupFn" repeat="sto in Stores ">
+                        <div ng-bind-html="Stores.name | highlight: $select.search"></div>
+                          {{sto.name}}
+                      </ui-select-choices>
+                    </ui-select>
+                </div>
+              </div>
+            </div>
+            <br>
+
+            <div class="row table-responsive">
+            <table class="table table-striped b-t b-light">
+              <thead>
+              <tr class="text-primary">
+                <th>Store</th>
+                <th>Min</th>
+                <th>Max</th>
+                <th>ROL</th>
+                <th>ROQ</th>
+                <th>Stop Rec</th>
+                <th>Stop Iss</th>
+                <th>Location</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td > </td>
+                <td > </td>
+                <td > </td>
+                <td > </td>
+                <td >No Data </td>
+                <td > </td>
+                <td > </td>
+                <td > </td>
+              </tr>
+              </tbody>
+            </table>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="table-responsive">
+                  <table st-table="rowCollectionBasic" class="table table-bordered table-striped">
+                    <thead>
+                    <tr>
+                      <th>Cost Center</th>
+                      <th>Select</th>
+                      <th>Default</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="row in rowCollectionBasic" st-select-row="row">
+                      <td>{{row.costcenter}}</td>
+                      <td>{{row.select}}</td>
+                      <td>{{row.Default}}</td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="form-group">
+                  <label>Last Indent Date</label>
+                    <input type="text" class="form-control" placeholder="Enter Last Indent Date">
+                </div>
+                <div class="form-group">
+                  <label>Last Receipt Date</label>
+                    <input type="text" class="form-control" placeholder="Enter Last Receipt Date">
+                </div>
+                <div class="form-group">
+                  <label>Issue Date</label>
+                    <input type="text" class="form-control" placeholder="Enter Issue Date">
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="form-group">
+                  <label>Supplier Name </label>
+                    <input type="text" class="form-control" placeholder="Enter Supplier Name">
+                </div>
+                <div class="form-group">
+                  <label>Rate</label>
+                    <input type="text" class="form-control" placeholder="Enter Rate">
+                </div>
+                <div class="form-group ">
+                  <label>Status </label>
+                  <br>
+                  <label class="i-checks">
+                    <input class="" type="checkbox" checked ><i></i> Active
+                  </label>
+                </div>
+              </div>
+            
+              
+        </div>
+        <br>
+        <div class="row">
+          <div class="form-group col-md-offset-5">
+          <button class="btn btn-primary">Save</button>
+          <button class="btn btn-info">Cancel</button>
+          </div>
+        </div>
+      </div>
+<!--     </div>
+  </div> -->
+
+</div>
