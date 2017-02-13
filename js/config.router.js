@@ -120,12 +120,12 @@ angular.module('app')
               })
               .state('app.oper.indents', {
                   url: '/indents',
-                  templateUrl: 'tpl/materials/indent.html ',
-                  /*resolve: load(['js/app/map/load-google-maps.js', 'js/app/map/ui-map.js', 'js/app/map/map.js'], function(){ return loadGoogleMaps(); })*/
+                  templateUrl: 'tpl/operation/indent.html '
+                  
               })
                .state('app.oper.indentsview', {
                   url: '/indentsview',
-                  templateUrl: 'tpl/materials/indentView.html ',
+                  templateUrl: 'tpl/operation/indentView.html '
                   
               })
               .state('app.oper.dept-requist', { 
@@ -135,31 +135,31 @@ angular.module('app')
               })
               .state('app.oper.purchase-orderview', {
                   url: '/purchase-orderview',
-                  templateUrl: 'tpl/materials/purchaseOrderView.html'
+                  templateUrl: 'tpl/operation/purchaseOrderView.html'
               })
               .state('app.oper.purchase-orderAdd', {
                   url: '/purchase-orderAdd',
-                  templateUrl: 'tpl/materials/purchaseOrderAdd.html',
+                  templateUrl: 'tpl/operation/purchaseOrderAdd.html'
               })
               .state('app.oper.receiptsView', {
                   url: '/receiptsView',
-                  templateUrl: 'tpl/materials/receiptView.html',
+                  templateUrl: 'tpl/operation/receiptView.html'
               })
                .state('app.oper.receiptsAdd', {
                   url: '/receiptsAdd',
-                  templateUrl: 'tpl/materials/receiptAdd.html',
+                  templateUrl: 'tpl/operation/receiptAdd.html'
               })
               .state('app.oper.receipt-returns', {
                   url: '/receipt-returns',
-                  templateUrl: 'tpl/materials/receiptReturns.html',
+                  templateUrl: 'tpl/operation/receiptReturns.html'
               })
               .state('app.oper.store-issues', {
                   url: '/store-issues',
-                  templateUrl: 'tpl/materials/storewiseIssuesView.html'
+                  templateUrl: 'tpl/operation/storewiseIssuesView.html'
               })
                 .state('app.oper.store-issuesAdd', {
                   url: '/store-issuesAdd',
-                  templateUrl: 'tpl/materials/storewiseIssuesAdd.html'
+                  templateUrl: 'tpl/operation/storewiseIssuesAdd.html'
               })
               .state('app.oper.issues', { 
                   url: '/issues',
