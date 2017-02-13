@@ -204,9 +204,22 @@
                   <label>Bill Date</label>
                   <input type="text" name="" class="form-control">
                 </div>
-                <div class="col-md-3">
+                <!-- <div class="col-md-3">
                   <label>Delivery Note Date</label>
                   <input type="text" name="" class="form-control">
+                </div> -->
+                <div class="col-md-3">
+                  <label>Doc Date</label>
+                  <div class="form-group">
+                    <div class="col-sm-10" ng-controller="DatepickerDemoCtrl">
+                      <div class="input-group w-md" style="margin-left:-16px !important">
+                        <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="Indent_Date" is-open="opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
+                        <span class="input-group-btn">
+                          <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div> 
             <!-- </form> -->
