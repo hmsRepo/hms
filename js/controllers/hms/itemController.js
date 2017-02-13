@@ -1,4 +1,4 @@
-app.controller('itemController', ['$scope','$controller','$http','$localStorage','editableOptions', 'editableThemes', function($scope,controller,$http,$localStorage, editableOptions, editableThemes){
+app.controller('itemController', ['$scope','$controller','$http','$localStorage', function($scope,controller,$http,$localStorage, editableOptions, editableThemes){
 //  app.controller('itemController', ['$scope', '$filter', '$http', 'editableOptions', 'editableThemes', 
  // function($scope, $filter, $http, editableOptions, editableThemes){
     // editableThemes.bs3.inputClass = 'input-sm';
@@ -79,9 +79,7 @@ app.controller('itemController', ['$scope','$controller','$http','$localStorage'
         ];
 
         $scope.users = [
-          {id: 1, name: 'awesome user1', status: 2, group: 4, groupName: 'admin'},
-          {id: 2, name: 'awesome user2', status: undefined, group: 3, groupName: 'vip'},
-          {id: 3, name: 'awesome user3', status: 2, group: null}
+          //{id: 1, Store: 'Banquets', status: 2, group: 4, groupName: 'admin'}
         ];
         $scope.rowCollectionBasic = [
             {costcenter: 'ACCOUNTS', select: 'Y',  Default: ''},
@@ -93,6 +91,17 @@ app.controller('itemController', ['$scope','$controller','$http','$localStorage'
 	
 
 }]);
+app.directive('focusMe', function () {
+    return {
+        link: function (scope, element, attrs) {
+          console.log(attrs.focusMe,"attrs")  ;
+          if (scope.$last && attrs.focusMe=="first") {
+            // console.log(element[0]);
+             element[0].focus();
+           }
+        }
+    };
+  });
 // app.directive('checkRow',function(){
 //    return function(scope, element, attrs) {
 //     console.log(element);

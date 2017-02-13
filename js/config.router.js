@@ -72,7 +72,7 @@ angular.module('app')
                   url: '/item-master',
                   templateUrl: 'tpl/hms/item_master.html',
                   controller: 'itemController',
-                  resolve: load(['ui.select','smart-table','xeditable','js/controllers/hms/itemController.js'])
+                  resolve: load(['ui.select','smart-table','js/controllers/hms/itemController.js'])
               })
               // .state('app.mat.item-master', {
               //     url: '/item-master',
