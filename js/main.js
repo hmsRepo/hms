@@ -13,7 +13,8 @@ angular.module('app')
       // config
       $scope.app = {
         name: 'HMS',
-        version: '2.2.0',
+        // version: '2.2.0',
+        version: '',
         // for chart colors
         color: {
           primary: '#7266ba',
