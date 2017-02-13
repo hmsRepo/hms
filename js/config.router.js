@@ -46,34 +46,34 @@ angular.module('app')
               })
               .state('app.mat.stores', {
                   url: '/stores',
-                  templateUrl: 'tpl/app_dashboard_v1.html',
+                  templateUrl: 'tpl/master/storeview.html',
                   resolve: load(['js/controllers/chart.js'])
               })
               .state('app.mat.groups', {
-                  url: '/dashboard-v2',
-                  templateUrl: 'tpl/app_dashboard_v2.html',
+                  url: '/group',
+                  templateUrl: 'tpl/master/groupview.html',
                   resolve: load(['js/controllers/chart.js'])
               })
               .state('app.mat.uom', {
-                  url: '/dashboard-v3',
-                  templateUrl: 'tpl/app_dashboard_v3.html',
+                  url: '/uom',
+                  templateUrl: 'tpl/master/uomview.html',
                   resolve: load(['js/controllers/chart.js'])
               })
               .state('app.mat.cost-centre', {
-                  url: '/buttons',
-                  templateUrl: 'tpl/ui_buttons.html'
+                  url: '/costcenter',
+                  templateUrl: 'tpl/master/costcenterview.html'
               })
               .state('app.mat.item-master', {
                   url: '/icons',
                   templateUrl: 'tpl/ui_icons.html'
               })
               .state('app.mat.supplier-master', {
-                  url: '/grid',
-                  templateUrl: 'tpl/ui_grid.html'
+                  url: '/supplier-master',
+                  templateUrl: 'tpl/master/suppliermasterview.html'
               })
               .state('app.mat.taxcode', {
-                  url: '/widgets',
-                  templateUrl: 'tpl/ui_widgets.html'
+                  url: '/taxcode',
+                  templateUrl: 'tpl/master/taxcodeview.html'
               })          
               .state('app.mat.tax-structure', {
                   url: '/bootstrap',
@@ -84,8 +84,8 @@ angular.module('app')
                   templateUrl: 'tpl/ui_sortable.html'
               })
               .state('app.mat.store-parameters', {
-                  url: '/scroll',
-                  templateUrl: 'tpl/ui_scroll.html',
+                  url: '/store-parameter',
+                  templateUrl: 'tpl/master/storeparaview.html',
                   resolve: load('js/controllers/scroll.js')
               })
               .state('app.mat.subcost-centre', {

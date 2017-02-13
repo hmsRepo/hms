@@ -1,0 +1,160 @@
+<style>
+.nav-tabs li.active a, .nav-tabs li.active a:focus, .nav-tabs li.active a:hover {
+    /*background: #00acac none repeat scroll 0 0 !important;#333*/
+    background: #00ACAC none repeat scroll 0 0 !important;
+    color:#ffffff !important;
+}
+.btncolor{
+  background: #00ACAC !important;
+}
+.imp{
+   color:red !important;
+}
+</style>
+
+<div class="bg-light lter b-b wrapper-md">
+    <div class="row">
+    <div class="col-md-4">
+      <h4 class="m-n font-thin h4"><i class="fa fa-pencil-square-o"></i> &nbsp&nbsp<b>Stores Paramater</b> | Stores</h4>
+      </div>
+      <div class="col-md-8">
+      <ul class="breadcrumb pull-right">
+        <li><a href=""><i class="fa fa-home"></i> Breadcrumb</a></li>
+        <li><a href="">Elements</a></li>
+        <li class="active">Components</li>
+      </ul>
+      </div>
+    </div>
+</div>
+<div class="wrapper-md">
+<div class="panel panel-default">
+        <div class="panel-heading font-bold">Stores Parameter</div>
+        <div class="panel-body">
+        <form role="form" class="ng-pristine ng-valid">
+          <div class="row col-md-12">
+          <div class="form-group col-md-4">
+          <label class="col-sm-8 control-label" style="margin-top:8px">Issue All Items Directly</label>
+            <div class="col-sm-4">
+              <div class="checkbox">
+                <label class="i-checks">
+                <input type="checkbox" checked="">
+                  <i></i>
+                  Yes
+                </label>
+              </div>
+              </div>
+          </div>
+          <div class="form-group col-md-4">
+          <label class="col-sm-8 control-label" style="margin-top:8px">Validate Indent During Issues</label>
+            <div class="col-sm-4">
+              <div class="checkbox">
+                <label class="i-checks">
+                <input type="checkbox" checked="">
+                  <i></i>
+                  Yes
+                </label>
+              </div>
+              </div>
+          </div>
+          <div class="form-group col-md-4">
+          <label class="col-sm-8 control-label" style="margin-top:8px">Indent Interface</label>
+            <div class="col-sm-4">
+              <div class="checkbox">
+                <label class="i-checks">
+                <input type="checkbox" checked="">
+                  <i></i>
+                  Yes
+                </label>
+              </div>
+              </div>
+          </div>
+          </div>
+          <div class="row col-md-12">
+          <div class="form-group col-md-4">
+          <label class="col-sm-8 control-label" style="margin-top:8px">Receipts Modification</label>
+            <div class="col-sm-4">
+              <div class="checkbox">
+                <label class="i-checks">
+                <input type="checkbox" checked="">
+                  <i></i>
+                  Yes
+                </label>
+              </div>
+              </div>
+          </div>
+          </div>
+          <legend>Stores Parameter Details</legend>
+          <div class="row col-md-12">
+            <div class="form-group col-md-4">
+              <label>GRN Back Date</label>
+              <div ng-controller="DatepickerDemoCtrl">
+                <div class="input-group w-md" style="width: 250px">
+                  <input type="text" class="form-control" ng-click="open($event)" datepicker-popup="{{format}}"  ng-model="Batch.ACA_BAT_START_DT" is-open="opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
+                  <span class="input-group-btn">
+                    <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="form-group col-md-4">
+              <label>Issue Back Date</label>
+              <div ng-controller="DatepickerDemoCtrl">
+                <div class="input-group w-md" style="width: 250px">
+                  <input type="text" class="form-control" ng-click="open($event)" datepicker-popup="{{format}}"  ng-model="Batch.ACA_BAT_START_DT" is-open="opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
+                  <span class="input-group-btn">
+                    <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="form-group col-md-4">
+              <label>Adjustment Back Date</label>
+              <div ng-controller="DatepickerDemoCtrl">
+                <div class="input-group w-md" style="width: 250px">
+                  <input type="text" class="form-control" ng-click="open($event)" datepicker-popup="{{format}}"  ng-model="Batch.ACA_BAT_START_DT" is-open="opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
+                  <span class="input-group-btn">
+                    <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row col-md-12">
+            <div class="form-group col-md-4">
+              <label>Purchase Order</label>
+              <input type="email" class="form-control" style="width: 250px" placeholder="Enter purchase order">
+            </div>
+            <div class="form-group col-md-4">
+              <label>GRN</label>
+              <input type="email" class="form-control" style="width: 250px" placeholder="Enter GRN">
+            </div>
+            <div class="form-group col-md-4">
+              <label>Issue</label>
+              <input type="email" class="form-control" style="width: 250px" placeholder="Enter Issue">
+            </div>
+          </div>
+          <div class="row col-md-12">
+            <div class="form-group col-md-4">
+              <label>Indent</label>
+              <input type="email" class="form-control" style="width: 250px" placeholder="Enter Indent">
+            </div>
+            <div class="form-group col-md-4">
+              <label>Template</label>
+              <input type="email" class="form-control" style="width: 250px" placeholder="Enter Template">
+            </div>
+            <div class="form-group col-md-4">
+              <label>Hotel Name for Print</label>
+              <input type="email" class="form-control" style="width: 250px" placeholder="Enter Name">
+              <br>
+            </div>
+            <div class="form-group col-md-offset-5">
+              <button class="btn btn-success" type="submit">Submit</button>
+            </div>
+          </div>
+       </form>
+      </div>
+</div>
+</div>
+<script>
+
+</script>
