@@ -69,9 +69,17 @@ angular.module('app')
                   resolve: load(['js/controllers/master/CostcenterCtrl.js'])
               })
               .state('app.mat.item-master', {
-                  url: '/icons',
-                  templateUrl: 'tpl/ui_icons.html'
+                  url: '/item-master',
+                  templateUrl: 'tpl/hms/item_master.html',
+                  controller: 'itemController',
+                  resolve: load(['ui.select','smart-table','xeditable','js/controllers/hms/itemController.js'])
               })
+              // .state('app.mat.item-master', {
+              //     url: '/item-master',
+              //     templateUrl: 'tpl/hms/item_master.html',
+              //     controller: 'itemController',
+              //     resolve: load(['xeditable','js/controllers/hms/itemController.js','ui.select'])
+              // })
               .state('app.mat.supplier-master', {
                   url: '/supplier-master',
                   controller: 'SupplierMasterCtrl',
