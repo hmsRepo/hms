@@ -1,0 +1,242 @@
+<style type="text/css">
+  .select-page {
+    width: 50px;
+    text-align: center;
+  }
+/*  .modal-dialog{
+    width: 350px !important;
+  }*/
+  .bootbox .modal-dialog{
+    width: 150px !important;
+    padding-top: 200px;  
+  }
+  .pagination li a input {
+    padding: 0;
+    margin: -5px 0;
+  }
+  .border{
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 3px 15px !important;
+}
+</style>
+<div>
+
+  <!-- <div class="bg-light lter b-b wrapper-md">
+    <div class="row">
+    <div class="col-md-4">
+      <h4 class="m-n font-thin h4"><i class="icon-settings""></i> &nbsp&nbsp<b>Operations</b> | Indents</h4>
+      </div>
+      <div class="col-md-8">
+      <ul class="breadcrumb pull-right">
+        <li><a href=""><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="">Operations</a></li>
+        <li class="active">Indents</li>
+      </ul>
+      </div>
+    </div>
+  </div> -->
+  <div class="wrapper-md" >
+  <toaster-container toaster-options="{'position-class': 'toast-top-left', 'close-button':true}"></toaster-container>
+    <div class="panel panel-default">
+    <div class="panel-heading" style="padding:10px;">
+    <span style="font-size:18px;"><b>Add Receipt</b></span>
+    <hr>  
+  
+      <form name="" class="form-validation">
+           
+          <div class="row">
+            
+             <div class="col-sm-3">
+              <div class="form-group">
+                  <label class="control-label">P.O No</label>
+                  <input type="text"  placeholder="P.O #"  name="" ng-model="" class="form-control input-sm" required>
+              </div>         
+            </div>
+             <div class="col-sm-3">
+              <div class="form-group">
+                  <label class="control-label">P.O Date</label>
+                   <div class="" ng-controller="DatepickerDemoCtrl">
+                    <div class="input-group w-md">
+                      <input type="text" class="form-control input-sm" datepicker-popup="{{format}}" ng-model="" is-open="opened" datepicker-options="" close-text="Close" name="" ng-required="true" placeholder="Date">
+                      <span class="input-group-btn">
+                        <button type="button" class="btn btn-default btn-sm" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                      </span>
+                    </div>
+                  </div>
+              </div>
+             </div>
+             <div class="col-sm-3">
+              <div class="form-group">
+                <label class="control-label">Supplier Code</label> 
+                <input type="text" placeholder="" name="" ng-model="" class="form-control input-sm" required>
+              </div>
+             </div>
+            <div class="col-sm-3">
+             <div class="form-group">
+                <label class="control-label" style="margin-top:15px;"></label> 
+                <input type="text" placeholder="" name="" ng-model="" class="form-control input-sm" required>
+              </div>
+             </div>
+        </div>
+         <div class="row">
+            <div class="col-sm-3">
+              <div class="form-group">
+                  <label class="control-label">P.O Ref</label>
+                  <input type="text"  placeholder="P.O Ref"  name="" ng-model="" class="form-control input-sm" required>
+              </div>         
+            </div>
+             <div class="col-sm-3">
+              <div class="form-group">
+                  <label class="control-label">GRN Date</label>
+                   <div class="" ng-controller="DatepickerDemoCtrl">
+                    <div class="input-group w-md">
+                      <input type="text" class="form-control input-sm" datepicker-popup="{{format}}" ng-model="" is-open="opened" datepicker-options="" close-text="Close" name="" ng-required="true" placeholder="Date">
+                      <span class="input-group-btn">
+                        <button type="button" class="btn btn-default btn-sm" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                      </span>
+                    </div>
+                  </div>
+              </div>
+             </div>
+             <div class="col-sm-3">
+              <div class="form-group">
+                <label class="control-label">Delivery Note No</label> 
+                <input type="text" placeholder="" name="" ng-model="" class="form-control input-sm" required>
+              </div>         
+            </div>
+             <div class="col-sm-3">
+              <div class="form-group">
+                <label class="control-label">Delivery Note Date</label> 
+                 <div class="" ng-controller="DatepickerDemoCtrl">
+                    <div class="input-group w-md">
+                      <input type="text" class="form-control input-sm" datepicker-popup="{{format}}" ng-model="" is-open="opened" datepicker-options="" close-text="Close" name="" ng-required="true" placeholder="Date">
+                      <span class="input-group-btn">
+                        <button type="button" class="btn btn-default btn-sm" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                      </span>
+                    </div>
+                  </div>
+              </div>
+             </div>
+        </div>
+      
+
+
+      <div style=" border: 1px solid rgb(223,225,225); height: 200px;" >
+         <div>
+          <table st-table="rowCollectionBasic" class="table table-bordered table-striped">
+            <thead style="background-color: rgb(237,241,242);">
+              <tr>
+                <th>Srl#</th>
+                <th>Item Code</th>
+                <th>Description</th>
+                <th>Brand</th>
+                <th>UOM</th>
+                <th>Quantity</th>
+                <th>Rate</th>
+                <th>Value</th>
+                <th>Reg-Date</th>
+              </tr>
+            </thead>
+            <tbody>
+            <tr>
+             <td>1</td>
+             <td></td>
+             <td></td>
+             <td></td>
+             <td></td>
+             <td></td>
+             <td></td>
+             <td></td>
+             <td></td>
+            </tr>
+            </tbody>
+          </table>
+          </div>
+        </div><br>
+
+
+         <div class="row">
+         <div class="col-sm-3">
+             <div class="form-group">
+                <label class="control-label">Tax Value</label> 
+                <input type="text" placeholder="" name="" ng-model="" class="form-control input-sm" required>
+              </div>
+             </div>
+             <div class="col-sm-3">
+              <div class="form-group">
+                <label class="control-label">G.R.N Value</label> 
+                <input type="text" placeholder="" name="" ng-model="" class="form-control input-sm" required>
+              </div>         
+            </div>
+            
+        </div>
+        <div class="row">
+        <div class="col-sm-3">
+              <div class="form-group">
+                <label class="control-label">Last GRN Date</label> 
+                <div class="" ng-controller="DatepickerDemoCtrl">
+                    <div class="input-group w-md">
+                      <input type="text" class="form-control input-sm" datepicker-popup="{{format}}" ng-model="" is-open="opened" datepicker-options="" close-text="Close" name="" ng-required="true" placeholder="Date">
+                      <span class="input-group-btn">
+                        <button type="button" class="btn btn-default btn-sm" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                      </span>
+                    </div>
+                  </div>
+              </div>
+             </div>
+            
+             <div class="col-sm-3">
+              <div class="form-group">
+                <label class="control-label">Payment Mode</label> 
+                <input type="text" placeholder="" name="" ng-model="" class="form-control input-sm" required>
+              </div>         
+            </div>
+             <div class="col-sm-6" style="margin-top: -46px;">
+             <div class="form-group">
+              <div style=" border: 1px solid rgb(223,225,225); height: 100px;">
+                <table st-table="rowCollectionBasic" class="table table-bordered table-striped">
+                  <tr class="border">
+                    <th class="border" style="background-color: rgb(237,241,242);">Tax Code </th>
+                    <th class="border" style="background-color: rgb(237,241,242);">Tax Name</th> 
+                    <th class="border" style="background-color: rgb(237,241,242);">Amount</th>
+                  </tr>
+                  <tr class="border">
+                    <td class="border">TX03</td>
+                    <td class="border"></td>
+                    <td class="border"></td>
+                   
+                  </tr>
+                </table>
+                </div>
+
+              </div>
+            </div>
+        </div>
+         <div class="row">
+            <div class="col-sm-3">
+              <div class="form-group">
+                <label class="control-label">Remarks</label> 
+                 <input type="text" placeholder="" name="" ng-model="" class="form-control input-sm" value="15 DAYS CREDIT">
+                 
+              </div>
+             </div>
+        </div>
+        
+         <div class="row">
+             <div class="form-group">
+              <div class="col-lg-offset-5 col-lg-10">
+                <button type="button" class="btn btn-sm btn-info" ng-disabled="FeesRefundRules.$invalid && FeesRefundRules.$dirty">Save</button>
+                <button type="button" class="btn btn-sm btn-danger" data-dismiss="modal">Cancel</button>
+              </div>
+            </div>
+          </div>
+</form>
+
+        <br>
+         
+        </div>
+    </div>
+  </div>
+</div>
