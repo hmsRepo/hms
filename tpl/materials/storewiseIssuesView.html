@@ -61,6 +61,9 @@
         <thead>
           <tr>
             <th style="width:5px !important"></th>
+             <th>
+              <input st-search="''" placeholder="search for Store" class="input-sm form-control" type="search"/>
+            </th>
             <th>
               <input st-search="''" placeholder="search for indent No" class="input-sm form-control" type="search"/>
             </th>
@@ -83,10 +86,11 @@
                 <input type="checkbox" ng-model="selectall" ng-change="callbackbulk()"><i></i>
               </label>
             </th>
+            <th st-sort="">Store</th>
             <th st-sort="">Indent No</th>
             <th st-sort="">Indent Date</th>
-            <th st-sort="">Authorised</th>
-            <th st-sort="">Remarks</th>
+            <th st-sort="">Issue Date</th>
+            <th st-sort="">Quantity</th>
             <th>Action</th>
           </tr>
         </thead>
