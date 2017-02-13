@@ -3,6 +3,14 @@
   <!-- <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
     <span translate="aside.nav.HEADER">HMS</span>
   </li> -->
+
+  <li ui-sref-active="active">
+    <a ui-sref="app.dashboard-v1">
+      <i class="glyphicon glyphicon-stats icon text-primary-dker"></i>
+      <span class="font-bold" translate="aside.nav.DASHBOARD">Dashboard</span>
+    </a>
+  </li>
+
    <li ng-class="{active:$state.includes('app.mat')}">
     <a href class="auto">      
       <span class="pull-right text-muted">
