@@ -155,9 +155,13 @@ angular.module('app')
               })
               .state('app.oper.store-issues', {
                   url: '/store-issues',
-                  templateUrl: 'tpl/table_footable.html'
+                  templateUrl: 'tpl/materials/storewiseIssuesView.html'
               })
-              .state('app.oper.issues', {
+                .state('app.oper.store-issuesAdd', {
+                  url: '/store-issuesAdd',
+                  templateUrl: 'tpl/materials/storewiseIssuesAdd.html'
+              })
+              .state('app.oper.issues', { 
                   url: '/issues',
                   templateUrl: 'tpl/operation/issue.html',
                   controller: 'IssueCtrl',
