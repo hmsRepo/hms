@@ -230,7 +230,15 @@ angular.module('app')
               })
               .state('app.oper.dir-receipt', {
                   url: '/receipts',
-                  templateUrl: 'tpl/form_wizard.html'
+                  templateUrl: 'tpl/operation/dir_receipt.html',
+                  controller: 'IssueCtrl',
+                  resolve: load(['smart-table','ui.bootstrap','toaster','ngBootbox','js/controllers/operations/issue.js'])
+              })
+              .state('app.oper.dir-receipt-add', {
+                  url: '/add-receipts',
+                  templateUrl: 'tpl/operation/dir_receipt_add.html',
+                  controller: 'IssueCtrl',
+                  resolve: load(['smart-table','ui.bootstrap','toaster','ngBootbox','js/controllers/operations/issue.js'])
               })
               .state('app.oper.supplier-merge', {
                   url: '/supplier-merge',

@@ -1,0 +1,69 @@
+<style type="text/css">
+  .breadcrumbWidth{
+    height: 70px;
+  }
+</style>
+<div class="bg-light lter b-b wrapper-md breadcrumbWidth">
+  <div class="row">
+    <div class="col-md-4">
+      <h4 class="m-n font-thin h4"></i><b>HMS</b> | Opearations</h4>
+    </div>
+    <div class="col-md-8">
+      <ul class="breadcrumb pull-right">
+        <li><a href=""><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="">Operations</a></li>
+        <li class="active">Receipt</li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="wrapper-md">
+  <toaster-container toaster-options="{'position-class': 'toast-top-right', 'close-button':true}"></toaster-container>
+  <div class="panel panel-default">
+    <div class="panel-heading" style="padding:12px;"><span style="font-size:18px;"><b>Receipt</b></span>  
+    <button class="btn btn-success m-b-sm" style="float: right !important;margin-top:-5px;margin-right: 10px;" ui-sref="app.oper.dir-receipt-add"><i class="fa fa-plus"></i> Add Receipt</button>
+    </div>
+    <table st-table="rowCollectionBasic" class="table table-striped">
+      <thead>
+      <tr>
+        <th st-sort="Sno">Indent No</th>
+        <th st-sort="itemcode">Item Code</th>
+        <th st-sort="itemname">Descroption</th>
+        <th st-sort="city">UOM</th>
+        <th st-sort="value">Store</th>
+        <th st-sort="value">Rec.Qty</th>
+      </tr>
+      <tr>
+        <th>
+          <input st-search="'Sno'" placeholder="search number" class="input-sm form-control" type="search"/>
+        </th>
+        <th >
+          <input st-search="'itemcode'" placeholder="search code" class="input-sm form-control" type="search"/>
+        </th>
+        <th>
+          <input st-search="'itemname'" placeholder="search item name" class="input-sm form-control" type="search"/>
+        </th>
+         <th>
+          <input st-search="'city'" placeholder="search city" class="input-sm form-control" type="search"/>
+        </th>
+         <th>
+          <input st-search="'value'" placeholder="search value" class="input-sm form-control" type="search"/>
+        </th>
+        <th>
+          <input st-search="'value'" placeholder="search Variance" class="input-sm form-control" type="search"/>
+        </th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr >
+        <td>1</td>
+        <td>3557</td>
+        <td>7 UP 400ml</td>
+        <td>BOT</td>
+        <td>12.000</td>
+        <td>0.000</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

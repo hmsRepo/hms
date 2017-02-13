@@ -1,0 +1,329 @@
+<style type="text/css">
+  .breadcrumbWidth{
+    height: 70px;
+  }
+</style>
+<div class="bg-light lter b-b wrapper-md breadcrumbWidth">
+  <div class="row">
+    <div class="col-md-4">
+      <h4 class="m-n font-thin h4"></i><b>HMS</b> | Opearations</h4>
+    </div>
+    <div class="col-md-8">
+      <ul class="breadcrumb pull-right">
+        <li><a href=""><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="">Operations</a></li>
+        <li class="active">Receipt</li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- <div class="wrapper-md">
+  <div class="panel panel-default">
+    <div class="panel-heading font-bold">Receipt</div>
+    <div class="panel-body">
+      
+      <form class="form_validation">
+        <div class="row">
+          <div class="col-md-2">
+            <label>Supplier Code</label>
+            <input type="text" name="" class="form-control">
+          </div>
+          <div class="col-md-4">
+            <label>&nbsp;</label>
+            <input type="text" name="" class="form-control">
+          </div>
+          <div class="col-md-3">
+            <label>Bill No</label>
+            <input type="text" name="" class="form-control">
+          </div>
+          <div class="col-md-3">
+            <label>Delivery Note</label>
+            <input type="text" name="" class="form-control">
+          </div>
+        </div> 
+
+        <div class="row">
+          <div class="col-md-2">
+            <label>GRN Date</label>
+            <input type="text" name="" class="form-control">
+          </div>
+          <div class="col-md-4">
+            <label>Reference</label>
+            <input type="text" name="" class="form-control">
+          </div>
+          <div class="col-md-3">
+            <label>Bill Date</label>
+            <input type="text" name="" class="form-control">
+          </div>
+          <div class="col-md-3">
+            <label>Delivery Note Date</label>
+            <input type="text" name="" class="form-control">
+          </div>
+        </div> 
+      </form>
+      <br>
+
+      <table st-table="rowCollectionBasic" class="table table-bordered table-striped">
+        <thead>
+        <tr style="background-color: rgb(237,241,242);">
+          <th>S.No</th>
+          <th>Item Code</th>
+          <th>Description</th>
+          <th>UOM</th>
+          <th>Store</th>
+          <th>Rec.Qty</th>
+          <th>Tax %</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr  st-select-row="row">
+          <td><input type="text" class="form-control input-sm"></td>
+          <td><input type="text" class="form-control input-sm"></td>
+          <td><input type="text" class="form-control input-sm"></td>
+          <td><input type="text" class="form-control input-sm"></td>
+          <td><input type="text" class="form-control input-sm"></td>
+          <td><input type="text" class="form-control input-sm"></td>
+          <td><input type="text" class="form-control input-sm"></td>
+        </tr>
+        </tbody>
+      </table>
+
+      <form class="form-horizontal">
+        <div class="row">
+          <div class="col-md-6">
+              <div class="form-group">
+                <label class="col-md-3 control-label">G.R.N No</label>
+                <div class="col-md-6">
+                  <input type="password" class="form-control" placeholder="">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-md-3 control-label">Tax Value</label>
+                <div class="col-md-6">
+                  <input type="password" class="form-control" placeholder="">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-md-3 control-label">G.R.N Value</label>
+                <div class="col-md-6">
+                  <input type="password" class="form-control" placeholder="">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-md-3 control-label">G.R.N Time</label>
+                <div class="col-md-6">
+                  <input type="password" class="form-control" placeholder="">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-md-3 control-label">Remarks</label>
+                <div class="col-md-6">
+                  <input type="password" class="form-control" placeholder="">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-md-3 control-label">Payment Mode</label>
+                <div class="col-md-6">
+                  <input type="password" class="form-control" placeholder="">
+                </div>
+              </div>
+          </div>
+          <div class="col-md-6">
+              Tax for all item
+              <table st-table="rowCollectionBasic" class="table table-bordered table-striped">
+                <thead>
+                <tr style="background-color: rgb(237,241,242);">
+                  <th>Tax Code</th>
+                  <th>Tax Name</th>
+                  <th>Amount</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr  st-select-row="row">
+                  <td><input type="text" class="form-control input-sm"></td>
+                  <td><input type="text" class="form-control input-sm"></td>
+                  <td><input type="text" class="form-control input-sm"></td>
+                </tr>
+                </tbody>
+              </table>
+          </div>
+        </div>
+      </form>
+
+      <div class="form-group">        
+        <div class="col-sm-offset-5">
+          <button type="submit" class="btn btn-danger" ui-sref="app.oper.dir-receipt">Cancel</button>
+          <button type="submit" class="btn btn-success">Save</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div> -->
+
+<div class="wrapper-md">
+  <tabset class="tab-container" ng-init="steps={percent:20, step1:true, step2:false, step3:false}">
+    <tab heading="Direct" active="steps.step1" select="steps.percent=10">
+      <form name="step1" class="form-validation">
+        
+
+        <!-- <div class="panel panel-default">
+          <div class="panel-heading font-bold">Receipt</div>
+          <div class="panel-body"> -->
+            
+            <!-- <form class="form_validation"> -->
+              <div class="row">
+                <div class="col-md-2">
+                  <label>Supplier Code</label>
+                  <input type="text" ng-model="Supp_code" class="form-control" required>
+                </div>
+                <div class="col-md-4">
+                  <label>&nbsp;</label>
+                  <input type="text" name="" class="form-control">
+                </div>
+                <div class="col-md-3">
+                  <label>Bill No</label>
+                  <input type="text" name="" class="form-control">
+                </div>
+                <div class="col-md-3">
+                  <label>Delivery Note</label>
+                  <input type="text" name="" class="form-control">
+                </div>
+              </div> 
+
+              <div class="row">
+                <div class="col-md-2">
+                  <label>GRN Date</label>
+                  <input type="text" name="" class="form-control">
+                </div>
+                <div class="col-md-4">
+                  <label>Reference</label>
+                  <input type="text" name="" class="form-control">
+                </div>
+                <div class="col-md-3">
+                  <label>Bill Date</label>
+                  <input type="text" name="" class="form-control">
+                </div>
+                <div class="col-md-3">
+                  <label>Delivery Note Date</label>
+                  <input type="text" name="" class="form-control">
+                </div>
+              </div> 
+            <!-- </form> -->
+            <br>
+
+            <table st-table="rowCollectionBasic" class="table table-bordered table-striped">
+              <thead>
+              <tr style="background-color: rgb(237,241,242);">
+                <th>S.No</th>
+                <th>Item Code</th>
+                <th>Description</th>
+                <th>UOM</th>
+                <th>Store</th>
+                <th>Rec.Qty</th>
+                <th>Tax %</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr  st-select-row="row">
+                <td><input type="text" class="form-control input-sm"></td>
+                <td><input type="text" class="form-control input-sm"></td>
+                <td><input type="text" class="form-control input-sm"></td>
+                <td><input type="text" class="form-control input-sm"></td>
+                <td><input type="text" class="form-control input-sm"></td>
+                <td><input type="text" class="form-control input-sm"></td>
+                <td><input type="text" class="form-control input-sm"></td>
+              </tr>
+              </tbody>
+            </table>
+
+            <div class="form-horizontal">
+              <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="col-md-3 control-label">G.R.N No</label>
+                      <div class="col-md-6">
+                        <input type="password" class="form-control" placeholder="">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-md-3 control-label">Tax Value</label>
+                      <div class="col-md-6">
+                        <input type="password" class="form-control" placeholder="">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-md-3 control-label">G.R.N Value</label>
+                      <div class="col-md-6">
+                        <input type="password" class="form-control" placeholder="">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-md-3 control-label">G.R.N Time</label>
+                      <div class="col-md-6">
+                        <input type="password" class="form-control" placeholder="">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-md-3 control-label">Remarks</label>
+                      <div class="col-md-6">
+                        <input type="password" class="form-control" placeholder="">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-md-3 control-label">Payment Mode</label>
+                      <div class="col-md-6">
+                        <input type="password" class="form-control" placeholder="">
+                      </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    Tax for all item
+                    <table st-table="rowCollectionBasic" class="table table-bordered table-striped">
+                      <thead>
+                      <tr style="background-color: rgb(237,241,242);">
+                        <th>Tax Code</th>
+                        <th>Tax Name</th>
+                        <th>Amount</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <tr  st-select-row="row">
+                        <td><input type="text" class="form-control input-sm"></td>
+                        <td><input type="text" class="form-control input-sm"></td>
+                        <td><input type="text" class="form-control input-sm"></td>
+                      </tr>
+                      </tbody>
+                    </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">        
+              <div class="col-sm-offset-5">
+                <button type="submit" class="btn btn-danger" ui-sref="app.oper.dir-receipt">Cancel</button>
+                <button type="submit" class="btn btn-success">Save</button>
+              </div>
+            </div>
+
+          <!-- </div>
+        </div> -->
+
+        <div class="row wrapper-md">
+          <div class="form-group">
+            <button type="submit" ng-disabled="step1.$invalid" class="btn btn-default btn-rounded pull-right" ng-click="steps.step2=true">Next</button>
+          </div>
+        </div>
+      </form>
+    </tab>
+    <tab heading="Contracts" disabled="step1.$invalid" active="steps.step2" select="steps.percent=30">
+      <form name="step2" class="form-validation">
+        <h3><u>Contracts</u></h3>
+        <div class="m-t m-b">
+          <button type="button" class="btn btn-default btn-rounded" ng-click="steps.step1=true">Prev</button>
+          <button type="submit" class="btn btn-default btn-rounded pull-right">Next</button>
+        </div>
+      </form>
+    </tab>
+  </tabset>
+</div>

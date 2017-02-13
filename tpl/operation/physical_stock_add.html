@@ -48,20 +48,24 @@
       <table st-table="rowCollectionBasic" class="table table-bordered table-striped">
         <thead>
         <tr style="background-color: rgb(237,241,242);">
-          <th>S.No</th>
+          <th style="width:8%;">S.No</th>
           <th>Item Code</th>
           <th>Item Name</th>
+          <th>UOM</th>
+          <th>Curr.Qty</th>
           <th>Physical</th>
-          <th>value</th>
+          <th>variance</th>
         </tr>
         </thead>
         <tbody>
-        <tr ng-repeat="row in rowCollectionBasic" st-select-row="row">
-          <td>{{row.Sno}}</td>
-          <td>{{row.itemcode}}</td>
-          <td>{{row.itemname}}</td>
-          <td>{{row.uom}}</td>
-          <td>{{row.value}}</td>
+        <tr  st-select-row="row">
+          <td><input type="text" class="form-control input-sm" value="1"></td>
+          <td><input type="text" class="form-control input-sm" value="2355"></td>
+          <td><input type="text" class="form-control input-sm" value="7 Up 400 Ml"></td>
+          <td><input type="text" class="form-control input-sm" value="BOT"></td>
+          <td><input type="text" class="form-control input-sm" value="120.00"></td>
+          <td><input type="text" class="form-control input-sm" value="120.00"></td>
+          <td><input type="text" class="form-control input-sm" value="0.00"></td>
         </tr>
         </tbody>
       </table>
