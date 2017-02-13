@@ -176,6 +176,7 @@ angular.module('app')
                 .state('app.oper.store-issuesAdd', {
                   url: '/store-issuesAdd',
                   templateUrl: 'tpl/operation/storewiseIssuesAdd.html'
+                  
               })
               .state('app.oper.issues', { 
                   url: '/issues',
