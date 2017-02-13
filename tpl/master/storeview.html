@@ -129,9 +129,9 @@
         <tbody ng-hide="isLoading">
           <tr ng-repeat="row in displayedCollection">
             <td ><label class="i-checks m-b-none"><input type="checkbox" name="post[]" ng-model="post[$index]" ng-value="$index" ng-change="callbackfunction()"><i></i></label></td>
-            <td>{{row.ACA_BAT_NAME}}</td>
-            <td>{{row.ACA_BAT_START_DT | date:'dd-MM-yyyy'}}</td>
-            <td>{{row.ACA_BAT_END_DT | date:'dd-MM-yyyy'}}</td>
+            <td>{{row.CODE}}</td>
+            <td>{{row.DESC}}</td>
+            <td>{{row.DATE}}</td>
 <!--             <td>{{row.ACA_BAT_END_DT}}</td> -->
 <!--             <td>{{row.ACA_BAT_IMP_PRE_BAT_SUB_YN}}</td>
             <td>{{row.ACA_BAT_IMP_PRE_BAT_MASTER_FEE_YN}}</td> -->
@@ -270,7 +270,7 @@
           </form>
         </div>
         <div class="modal-footer ng-scope">                  
-            <button ng-click="cancel()" class="btn btn-default">Cancel</button>
+            <button class="btn btn-default" ng-click="cancel()" data-dismiss="modal">Cancel</button>
             <button ng-click="ok()" class="btn btn-primary">Save</button>
         </div>
     </div>

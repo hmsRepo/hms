@@ -46,22 +46,27 @@ angular.module('app')
               })
               .state('app.mat.stores', {
                   url: '/stores',
+                  controller: 'StoresCtrl',
                   templateUrl: 'tpl/master/storeview.html',
-                  resolve: load(['js/controllers/chart.js'])
+                  resolve: load(['js/controllers/master/StoresCtrl.js'])
               })
               .state('app.mat.groups', {
                   url: '/group',
+                  controller: 'GroupsCtrl',
                   templateUrl: 'tpl/master/groupview.html',
-                  resolve: load(['js/controllers/chart.js'])
+                  resolve: load(['js/controllers/master/GroupsCtrl.js'])
               })
               .state('app.mat.uom', {
                   url: '/uom',
+                  controller: 'UomCtrl',
                   templateUrl: 'tpl/master/uomview.html',
-                  resolve: load(['js/controllers/chart.js'])
+                  resolve: load(['js/controllers/master/UomCtrl.js'])
               })
               .state('app.mat.cost-centre', {
                   url: '/costcenter',
-                  templateUrl: 'tpl/master/costcenterview.html'
+                  controller: 'CostcenterCtrl',
+                  templateUrl: 'tpl/master/costcenterview.html',
+                  resolve: load(['js/controllers/master/CostcenterCtrl.js'])
               })
               .state('app.mat.item-master', {
                   url: '/icons',
@@ -69,11 +74,21 @@ angular.module('app')
               })
               .state('app.mat.supplier-master', {
                   url: '/supplier-master',
-                  templateUrl: 'tpl/master/suppliermasterview.html'
+                  controller: 'SupplierMasterCtrl',
+                  templateUrl: 'tpl/master/suppliermasterview.html',
+                  resolve: load(['js/controllers/master/SupplierMasterCtrl.js'])
+              })
+              .state('app.mat.suppliermaster_add', {
+                  url: '/suppliermaster_add',
+                  controller: 'SupplierMasterAddCtrl',
+                  templateUrl: 'tpl/master/suppliermasteradd.html',
+                  resolve: load(['js/controllers/master/SupplierMasterAddCtrl.js'])
               })
               .state('app.mat.taxcode', {
                   url: '/taxcode',
-                  templateUrl: 'tpl/master/taxcodeview.html'
+                  controller: 'TaxcodeCtrl',
+                  templateUrl: 'tpl/master/taxcodeview.html',
+                  resolve: load(['js/controllers/master/TaxcodeCtrl.js'])
               })          
               .state('app.mat.tax-structure', {
                   url: '/bootstrap',
@@ -85,8 +100,9 @@ angular.module('app')
               })
               .state('app.mat.store-parameters', {
                   url: '/store-parameter',
+                  controller: 'StoresParaCtrl',
                   templateUrl: 'tpl/master/storeparaview.html',
-                  resolve: load('js/controllers/scroll.js')
+                  resolve: load('js/controllers/master/StoresParaCtrl.js')
               })
               .state('app.mat.subcost-centre', {
                   url: '/portlet',
