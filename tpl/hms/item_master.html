@@ -1,3 +1,20 @@
+<style type="text/css">
+  input {
+    display: block !important; 
+    padding: 0 !important; margin: 0 !important;
+    width: 100% !important; border-radius: 0 !important;
+    line-height: 1 !important;}
+  td {margin: 0 !important; padding: 0 !important;}
+  /* td .form-control{
+    height: 0px !important;
+    padding: 10px 15px !important;
+    line-height: 1.9 !important;
+
+  }
+  td {
+    padding: 2px !important;
+  }*/
+</style>
 <div class="bg-light lter b-b wrapper-md">
   <h1 class="m-n font-thin h3">Item Master</h1>
 </div>
@@ -142,55 +159,55 @@
               <tbody>
               <tr ng-repeat="user in users | filter:filterUser">
                 <td>
-                  <input type="text" ng-model="user.Store" value="{{user.Store}}"  focus-me="first" class="form-control" placeholder="">
+                  <input type="text" ng-model="user.Store" value="{{user.Store}}"  focus-me="first" class="form-control input-sm" placeholder="">
                 </td>
                 <td>
-                  <input type="text" ng-model="user.Min" value="{{user.Min}}"  focus-me class="form-control" placeholder="">
+                  <input type="text" ng-model="user.Min" value="{{user.Min}}"  focus-me class="form-control input-sm" placeholder="">
                 </td>
                 <td>
-                  <input type="text" ng-model="user.Max" value="{{user.Max}}"  focus-me class="form-control" placeholder="">
+                  <input type="text" ng-model="user.Max" value="{{user.Max}}"  focus-me class="form-control input-sm" placeholder="">
                 </td>
                 <td>
-                  <input type="text" ng-model="user.ROL" value="{{user.ROL}}"  focus-me class="form-control" placeholder="">
+                  <input type="text" ng-model="user.ROL" value="{{user.ROL}}"  focus-me class="form-control input-sm" placeholder="">
                 </td>
                  <td>
-                  <input type="text" ng-model="user.ROQ" value="{{user.ROQ}}"  focus-me class="form-control" placeholder="">
+                  <input type="text" ng-model="user.ROQ" value="{{user.ROQ}}"  focus-me class="form-control input-sm" placeholder="">
                 </td>
                 <td>
-                  <input type="text" ng-model="user.Rec" value="{{user.Rec}}"  focus-me class="form-control" placeholder="">
+                  <input type="text" ng-model="user.Rec" value="{{user.Rec}}"  focus-me class="form-control input-sm" placeholder="">
                 </td>
                 <td>
-                  <input type="text" ng-model="user.Iss" value="{{user.Iss}}"  focus-me class="form-control" placeholder="">
+                  <input type="text" ng-model="user.Iss" value="{{user.Iss}}"  focus-me class="form-control input-sm" placeholder="">
                 </td>
                 <td>
-                  <input type="text" ng-model="user.Location" value="{{user.Location}}"  focus-me class="form-control" placeholder="">
+                  <input type="text" ng-model="user.Location" value="{{user.Location}}"  focus-me class="form-control input-sm" placeholder="">
                 </td>
                 <td><button type="button" ng-click="removeUser($index)" class="btn btn-sm btn-danger pull-right">Del</button></td>
               </tr>
               <tr >
                 <td>
-                  <input type="text" ng-model="user.Store" ng-focus="addUser()" class="form-control" placeholder="" >
+                  <input type="text" ng-model="user.Store" ng-focus="addUser()" class="form-control input-sm" placeholder="" >
                 </td>
                 <td>
-                  <input type="text" ng-model="user.Min" ng-focus="addUser()" class="form-control" placeholder="">
+                  <input type="text" ng-model="user.Min" ng-focus="addUser()" class="form-control input-sm" placeholder="">
                 </td>
                 <td>
-                  <input type="text" ng-model="user.Max" ng-focus="addUser()" class="form-control" placeholder="">
+                  <input type="text" ng-model="user.Max" ng-focus="addUser()" class="form-control input-sm" placeholder="">
                 </td>
                 <td>
-                  <input type="text" ng-model="user.ROL" ng-focus="addUser()" class="form-control" placeholder="">
+                  <input type="text" ng-model="user.ROL" ng-focus="addUser()" class="form-control input-sm" placeholder="">
                 </td>
                 <td>
-                  <input type="text" ng-model="user.ROQ" ng-focus="addUser()" class="form-control" placeholder="">
+                  <input type="text" ng-model="user.ROQ" ng-focus="addUser()" class="form-control input-sm" placeholder="">
                 </td>
                 <td>
-                  <input type="text" ng-model="user.Rec" ng-focus="addUser()" class="form-control" placeholder="">
+                  <input type="text" ng-model="user.Rec" ng-focus="addUser()" class="form-control input-sm" placeholder="">
                 </td>
                 <td>
-                  <input type="text" ng-model="user.Iss" ng-focus="addUser()" class="form-control" placeholder="">
+                  <input type="text" ng-model="user.Iss" ng-focus="addUser()" class="form-control input-sm" placeholder="">
                 </td>
                 <td>
-                  <input type="text" ng-model="user.Location" ng-focus="addUser()" class="form-control" placeholder="">
+                  <input type="text" ng-model="user.Location" ng-focus="addUser()" class="form-control input-sm" placeholder="">
                 </td>
                 <td><button type="button" ng-click="removeUser($index)" class="btn btn-sm btn-danger pull-right">Del</button></td>
               </tr>
