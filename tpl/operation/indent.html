@@ -4,7 +4,7 @@
     text-align: center;
   }
 </style>
-<div>
+<div >
   <div class="wrapper-md" >
   <toaster-container toaster-options="{'position-class': 'toast-top-left', 'close-button':true}"></toaster-container>
     <div class="panel panel-default">
@@ -111,7 +111,7 @@
               </tr>
             </thead>
             <tbody>
-            <tr>
+            <!-- <tr>
              <td>1</td>
              <td></td>
              <td></td>
@@ -121,7 +121,62 @@
              <td></td>
              <td></td>
              <td></td>
-            </tr>
+            </tr> -->
+
+            <tr ng-repeat="user in users | filter:filterUser">
+                <td>
+                  <input type="text" ng-model="user.Store" value="{{user.Store}}"  focus-me="first" class="form-control input-sm" placeholder="">
+                </td>
+                <td>
+                  <input type="text" ng-model="user.Min" value="{{user.Min}}"  focus-me class="form-control input-sm" placeholder="">
+                </td>
+                <td>
+                  <input type="text" ng-model="user.Max" value="{{user.Max}}"  focus-me class="form-control input-sm" placeholder="">
+                </td>
+                <td>
+                  <input type="text" ng-model="user.ROL" value="{{user.ROL}}"  focus-me class="form-control input-sm" placeholder="">
+                </td>
+                 <td>
+                  <input type="text" ng-model="user.ROQ" value="{{user.ROQ}}"  focus-me class="form-control input-sm" placeholder="">
+                </td>
+                <td>
+                  <input type="text" ng-model="user.Rec" value="{{user.Rec}}"  focus-me class="form-control input-sm" placeholder="">
+                </td>
+                <td>
+                  <input type="text" ng-model="user.Iss" value="{{user.Iss}}"  focus-me class="form-control input-sm" placeholder="">
+                </td>
+                <td>
+                  <input type="text" ng-model="user.Location" value="{{user.Location}}"  focus-me class="form-control input-sm" placeholder="">
+                </td>
+                <td><button type="button" ng-click="removeUser($index)" class="btn btn-sm btn-danger pull-right">Del</button></td>
+              </tr>
+              <tr >
+                <td>
+                  <input type="text" ng-model="userObj[$index].Store" ng-focus="addUser()" class="form-control input-sm" placeholder="" >
+                </td>
+                <td>
+                  <input type="text" ng-model="userObj[$index].Min" ng-focus="addUser()" class="form-control input-sm" placeholder="">
+                </td>
+                <td>
+                  <input type="text" ng-model="userObj[$index].Max" ng-focus="addUser()" class="form-control input-sm" placeholder="">
+                </td>
+                <td>
+                  <input type="text" ng-model="userObj[$index].ROL" ng-focus="addUser()" class="form-control input-sm" placeholder="">
+                </td>
+                <td>
+                  <input type="text" ng-model="userObj[$index].ROQ" ng-focus="addUser()" class="form-control input-sm" placeholder="">
+                </td>
+                <td>
+                  <input type="text" ng-model="userObj[$index].Rec" ng-focus="addUser()" class="form-control input-sm" placeholder="">
+                </td>
+                <td>
+                  <input type="text" ng-model="userObj[$index].Iss" ng-focus="addUser()" class="form-control input-sm" placeholder="">
+                </td>
+                <td>
+                  <input type="text" ng-model="userObj[$index].Location" ng-focus="addUser()" class="form-control input-sm" placeholder="">
+                </td>
+                <td><button type="button" ng-click="removeUser($index)" class="btn btn-sm btn-danger pull-right">Del</button></td>
+              </tr>
             </tbody>
           </table>
           </div>
@@ -149,3 +204,46 @@
     </div>
   </div>
 </div>
+<!-- <script type="text/javascript">
+app.controller('indentCtrl', ['$scope','$controller','$http','$localStorage', function($scope,controller,$http,$localStorage, editableOptions, editableThemes){
+  $scope.addUser = function() {
+      //alert("in");
+      if ($scope.users.length > 0) {
+        var previousIndex=parseInt($scope.users.length)-1;
+        if(!$scope.checkEmpty($scope.users[previousIndex])){
+            return false;
+        }
+      }
+      $scope.inserted = {
+        id: $scope.users.length+1,
+        Iss: '',
+        Location: ''
+      };
+      $scope.users.push($scope.inserted);
+    };
+    $scope.checkEmpty = function(data) {
+      console.log(data,'data');
+        if (data.Location!='' || data.Iss!='') {
+            return true;
+        }else{
+            return false;
+        }
+    };
+
+    $scope.removeUser = function(index) {
+      $scope.users.splice(index, 1);
+    };
+    $scope.users = [];
+  }]);
+app.directive('focusMe', function () {
+    return {
+        link: function (scope, element, attrs) {
+          console.log(attrs.focusMe,"attrs")  ;
+          if (scope.$last && attrs.focusMe=="first") {
+            // console.log(element[0]);
+             element[0].focus();
+           }
+        }
+    };
+  });
+</script> -->

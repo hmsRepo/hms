@@ -14,7 +14,49 @@ app.controller('IssueCtrl', ['$scope', '$timeout', function($scope, $timeout) {
   //      parent.append(curr_row.clone());
   //   }
   // }
+
+
+  $scope.addUser = function() {
+      //alert("in");
+      if ($scope.users.length > 0) {
+        var previousIndex=parseInt($scope.users.length)-1;
+        if(!$scope.checkEmpty($scope.users[previousIndex])){
+            return false;
+        }
+      }
+      $scope.inserted = {
+        id: $scope.users.length+1,
+        Iss: '',
+        Location: ''
+      };
+      $scope.users.push($scope.inserted);
+    };
+    $scope.checkEmpty = function(data) {
+        if (data.Location!='' || data.Iss!='') {
+            return true;
+        }else{
+            return false;
+        }
+    };
+
+    $scope.removeUser = function(index) {
+      $scope.users.splice(index, 1);
+    };
+    $scope.users=[];
+
 }]);
+
+app.directive('focusMe', function () {
+    return {
+        link: function (scope, element, attrs) {
+          console.log(attrs.focusMe,"attrs")  ;
+          if (scope.$last && attrs.focusMe=="first") {
+            // console.log(element[0]);
+             element[0].focus();
+           }
+        }
+    };
+  });
 
 
 // app.directive('tabKeyPress', function($compile) {

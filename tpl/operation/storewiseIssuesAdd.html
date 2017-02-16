@@ -168,10 +168,11 @@
                 <th>Rate</th>
                 <th>Value</th>
                 <th>Issue To</th>
+                <th>Action</th>
               </tr>
             </thead>
             <tbody>
-            <tr>
+            <!-- <tr>
              <td>1</td>
              <td></td>
              <td></td>
@@ -181,7 +182,61 @@
              <td></td>
              <td></td>
              
-            </tr>
+            </tr> -->
+            <tr ng-repeat="user in users | filter:filterUser">
+                <td>
+                  <input type="text" ng-model="user.Store" value="{{user.Store}}"  focus-me="first" class="form-control input-sm" placeholder="">
+                </td>
+                <td>
+                  <input type="text" ng-model="user.Min" value="{{user.Min}}"  focus-me class="form-control input-sm" placeholder="">
+                </td>
+                <td>
+                  <input type="text" ng-model="user.Max" value="{{user.Max}}"  focus-me class="form-control input-sm" placeholder="">
+                </td>
+                <td>
+                  <input type="text" ng-model="user.ROL" value="{{user.ROL}}"  focus-me class="form-control input-sm" placeholder="">
+                </td>
+                 <td>
+                  <input type="text" ng-model="user.ROQ" value="{{user.ROQ}}"  focus-me class="form-control input-sm" placeholder="">
+                </td>
+                <td>
+                  <input type="text" ng-model="user.Rec" value="{{user.Rec}}"  focus-me class="form-control input-sm" placeholder="">
+                </td>
+                <td>
+                  <input type="text" ng-model="user.Iss" value="{{user.Iss}}"  focus-me class="form-control input-sm" placeholder="">
+                </td>
+                <td>
+                  <input type="text" ng-model="user.Location" value="{{user.Location}}"  focus-me class="form-control input-sm" placeholder="">
+                </td>
+                <td><button type="button" ng-click="removeUser($index)" class="btn btn-sm btn-danger pull-right">Del</button></td>
+              </tr>
+              <tr >
+                <td>
+                  <input type="text" ng-model="userObj[$index].Store" ng-focus="addUser()" class="form-control input-sm" placeholder="" >
+                </td>
+                <td>
+                  <input type="text" ng-model="userObj[$index].Min" ng-focus="addUser()" class="form-control input-sm" placeholder="">
+                </td>
+                <td>
+                  <input type="text" ng-model="userObj[$index].Max" ng-focus="addUser()" class="form-control input-sm" placeholder="">
+                </td>
+                <td>
+                  <input type="text" ng-model="userObj[$index].ROL" ng-focus="addUser()" class="form-control input-sm" placeholder="">
+                </td>
+                <td>
+                  <input type="text" ng-model="userObj[$index].ROQ" ng-focus="addUser()" class="form-control input-sm" placeholder="">
+                </td>
+                <td>
+                  <input type="text" ng-model="userObj[$index].Rec" ng-focus="addUser()" class="form-control input-sm" placeholder="">
+                </td>
+                <td>
+                  <input type="text" ng-model="userObj[$index].Iss" ng-focus="addUser()" class="form-control input-sm" placeholder="">
+                </td>
+                <td>
+                  <input type="text" ng-model="userObj[$index].Location" ng-focus="addUser()" class="form-control input-sm" placeholder="">
+                </td>
+                <td><button type="button" ng-click="removeUser($index)" class="btn btn-sm btn-danger pull-right">Del</button></td>
+              </tr>
             </tbody>
           </table>
           </div>

@@ -50,15 +50,48 @@
           <th>Item Code</th>
           <th>Item Name</th>
           <th>Exp.Date</th>
+          <th>Action</th>
         </tr>
         </thead>
         <tbody>
-        <tr ng-repeat="row in rowCollectionBasic" st-select-row="row">
+        <!-- <tr ng-repeat="row in rowCollectionBasic" st-select-row="row">
           <td>{{}}</td>
           <td>{{}}</td>
           <td>{{}}</td>
           <td>{{}}</td>
-        </tr>
+        </tr> -->
+
+        <tr ng-repeat="user in users | filter:filterUser">
+                <td>
+                  <input type="text" ng-model="user.Store" value="{{user.Store}}"  focus-me="first" class="form-control input-sm" placeholder="">
+                </td>
+                <td>
+                  <input type="text" ng-model="user.Min" value="{{user.Min}}"  focus-me class="form-control input-sm" placeholder="">
+                </td>
+                <td>
+                  <input type="text" ng-model="user.Iss" value="{{user.Iss}}"  focus-me class="form-control input-sm" placeholder="">
+                </td>
+                <td>
+                  <input type="text" ng-model="user.Location" value="{{user.Location}}"  focus-me class="form-control input-sm" placeholder="">
+                </td>
+                <td><button type="button" ng-click="removeUser($index)" class="btn btn-sm btn-danger pull-right">Del</button></td>
+              </tr>
+              <tr >
+                <td>
+                  <input type="text" ng-model="userObj[$index].Store" ng-focus="addUser()" class="form-control input-sm" placeholder="" >
+                </td>
+                <td>
+                  <input type="text" ng-model="userObj[$index].Min" ng-focus="addUser()" class="form-control input-sm" placeholder="">
+                </td>
+                
+                <td>
+                  <input type="text" ng-model="userObj[$index].Iss" ng-focus="addUser()" class="form-control input-sm" placeholder="">
+                </td>
+                <td>
+                  <input type="text" ng-model="userObj[$index].Location" ng-focus="addUser()" class="form-control input-sm" placeholder="">
+                </td>
+                <td><button type="button" ng-click="removeUser($index)" class="btn btn-sm btn-danger pull-right">Del</button></td>
+              </tr>
         </tbody>
       </table>
 

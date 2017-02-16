@@ -144,7 +144,9 @@ angular.module('app')
               })
               .state('app.oper.indents', {
                   url: '/indents',
-                  templateUrl: 'tpl/operation/indent.html '
+                  templateUrl: 'tpl/operation/indent.html ',
+                  controller: 'itemController',
+                  resolve: load(['ui.select','smart-table','js/controllers/hms/itemController.js'])
                   
               })
                .state('app.oper.indentsview', {
@@ -163,7 +165,9 @@ angular.module('app')
               })
               .state('app.oper.purchase-orderAdd', {
                   url: '/purchase-orderAdd',
-                  templateUrl: 'tpl/operation/purchaseOrderAdd.html'
+                  templateUrl: 'tpl/operation/purchaseOrderAdd.html',
+                  controller: 'itemController',
+                  resolve: load(['ui.select','smart-table','js/controllers/hms/itemController.js'])
               })
               .state('app.oper.receiptsView', {
                   url: '/receiptsView',
@@ -171,11 +175,15 @@ angular.module('app')
               })
                .state('app.oper.receiptsAdd', {
                   url: '/receiptsAdd',
-                  templateUrl: 'tpl/operation/receiptAdd.html'
+                  templateUrl: 'tpl/operation/receiptAdd.html',
+                  controller: 'itemController',
+                  resolve: load(['ui.select','smart-table','js/controllers/hms/itemController.js'])
               })
               .state('app.oper.receipt-returns', {
                   url: '/receipt-returns',
-                  templateUrl: 'tpl/operation/receiptReturns.html'
+                  templateUrl: 'tpl/operation/receiptReturns.html',
+                  controller: 'itemController',
+                  resolve: load(['ui.select','smart-table','js/controllers/hms/itemController.js'])
               })
               .state('app.oper.store-issues', {
                   url: '/store-issues',
@@ -183,7 +191,9 @@ angular.module('app')
               })
                 .state('app.oper.store-issuesAdd', {
                   url: '/store-issuesAdd',
-                  templateUrl: 'tpl/operation/storewiseIssuesAdd.html'
+                  templateUrl: 'tpl/operation/storewiseIssuesAdd.html',
+                  controller: 'itemController',
+                  resolve: load(['ui.select','smart-table','js/controllers/hms/itemController.js'])
                   
               })
               .state('app.oper.issues', { 
