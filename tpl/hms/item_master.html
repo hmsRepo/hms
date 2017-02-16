@@ -29,13 +29,13 @@
               <div class="col-sm-3">
                 <div class="form-group">
                   <label>Item Code</label>
-                  <input type="text" class="form-control" placeholder="Enter Item code">
+                  <input type="text" class="form-control" ng-model="item_code" placeholder="Enter Item code">
                 </div>
               </div>
               <div class="col-sm-3">
                 <div class="form-group">
                   <label>Item Name</label>
-                  <input type="text" class="form-control" placeholder="Enter Item Name">
+                  <input type="text" class="form-control" ng-model="item_name" placeholder="Enter Item Name">
                 </div>
               </div>
               <div class="col-sm-3">
@@ -43,7 +43,7 @@
                   <!-- <label>Type </label> -->
                   <br>
                   <label class="i-checks">
-                    <input class="" type="checkbox" checked ><i></i> Stockable
+                    <input class="" type="checkbox" ng-model="item_stock" checked ><i></i> Stockable
                   </label>
                 </div>
               </div>
@@ -90,7 +90,7 @@
               <div class="col-sm-3">
                 <div class="form-group">
                   <label>Conv. Factor</label>
-                    <input type="text" class="form-control" placeholder="Enter Conv. Factor">
+                    <input type="text" class="form-control" ng-model="con_factor" placeholder="Enter Conv. Factor">
                 </div>
               </div>
               <div class="col-sm-3">
@@ -159,55 +159,55 @@
               <tbody>
               <tr ng-repeat="user in users | filter:filterUser">
                 <td>
-                  <input type="text" ng-model="user.Store" value="{{user.Store}}"  focus-me="first" class="form-control input-sm" placeholder="">
+                  <input type="text" ng-model="userObj[$index].Store" value="{{user.Store}}"  focus-me="first" class="form-control" placeholder="">
                 </td>
                 <td>
-                  <input type="text" ng-model="user.Min" value="{{user.Min}}"  focus-me class="form-control input-sm" placeholder="">
+                  <input type="text" ng-model="userObj[$index].Min" value="{{user.Min}}"  focus-me class="form-control" placeholder="">
                 </td>
                 <td>
-                  <input type="text" ng-model="user.Max" value="{{user.Max}}"  focus-me class="form-control input-sm" placeholder="">
+                  <input type="text" ng-model="userObj[$index].Max" value="{{user.Max}}"  focus-me class="form-control" placeholder="">
                 </td>
                 <td>
-                  <input type="text" ng-model="user.ROL" value="{{user.ROL}}"  focus-me class="form-control input-sm" placeholder="">
+                  <input type="text" ng-model="userObj[$index].ROL" value="{{user.ROL}}"  focus-me class="form-control" placeholder="">
                 </td>
                  <td>
-                  <input type="text" ng-model="user.ROQ" value="{{user.ROQ}}"  focus-me class="form-control input-sm" placeholder="">
+                  <input type="text" ng-model="userObj[$index].ROQ" value="{{user.ROQ}}"  focus-me class="form-control" placeholder="">
                 </td>
                 <td>
-                  <input type="text" ng-model="user.Rec" value="{{user.Rec}}"  focus-me class="form-control input-sm" placeholder="">
+                  <input type="text" ng-model="userObj[$index].Rec" value="{{user.Rec}}"  focus-me class="form-control" placeholder="">
                 </td>
                 <td>
-                  <input type="text" ng-model="user.Iss" value="{{user.Iss}}"  focus-me class="form-control input-sm" placeholder="">
+                  <input type="text" ng-model="userObj[$index].Iss" value="{{user.Iss}}"  focus-me class="form-control" placeholder="">
                 </td>
                 <td>
-                  <input type="text" ng-model="user.Location" value="{{user.Location}}"  focus-me class="form-control input-sm" placeholder="">
+                  <input type="text" ng-model="userObj[$index].Location" value="{{user.Location}}"  focus-me class="form-control" placeholder="">
                 </td>
                 <td><button type="button" ng-click="removeUser($index)" class="btn btn-sm btn-danger pull-right">Del</button></td>
               </tr>
               <tr >
                 <td>
-                  <input type="text" ng-model="user.Store" ng-focus="addUser()" class="form-control input-sm" placeholder="" >
+                  <input type="text" ng-model="userObj[$index].Store" ng-focus="addUser()" class="form-control" placeholder="" >
                 </td>
                 <td>
-                  <input type="text" ng-model="user.Min" ng-focus="addUser()" class="form-control input-sm" placeholder="">
+                  <input type="text" ng-model="userObj[$index].Min" ng-focus="addUser()" class="form-control" placeholder="">
                 </td>
                 <td>
-                  <input type="text" ng-model="user.Max" ng-focus="addUser()" class="form-control input-sm" placeholder="">
+                  <input type="text" ng-model="userObj[$index].Max" ng-focus="addUser()" class="form-control" placeholder="">
                 </td>
                 <td>
-                  <input type="text" ng-model="user.ROL" ng-focus="addUser()" class="form-control input-sm" placeholder="">
+                  <input type="text" ng-model="userObj[$index].ROL" ng-focus="addUser()" class="form-control" placeholder="">
                 </td>
                 <td>
-                  <input type="text" ng-model="user.ROQ" ng-focus="addUser()" class="form-control input-sm" placeholder="">
+                  <input type="text" ng-model="userObj[$index].ROQ" ng-focus="addUser()" class="form-control" placeholder="">
                 </td>
                 <td>
-                  <input type="text" ng-model="user.Rec" ng-focus="addUser()" class="form-control input-sm" placeholder="">
+                  <input type="text" ng-model="userObj[$index].Rec" ng-focus="addUser()" class="form-control" placeholder="">
                 </td>
                 <td>
-                  <input type="text" ng-model="user.Iss" ng-focus="addUser()" class="form-control input-sm" placeholder="">
+                  <input type="text" ng-model="userObj[$index].Iss" ng-focus="addUser()" class="form-control" placeholder="">
                 </td>
                 <td>
-                  <input type="text" ng-model="user.Location" ng-focus="addUser()" class="form-control input-sm" placeholder="">
+                  <input type="text" ng-model="userObj[$index].Location" ng-focus="addUser()" class="form-control" placeholder="">
                 </td>
                 <td><button type="button" ng-click="removeUser($index)" class="btn btn-sm btn-danger pull-right">Del</button></td>
               </tr>
@@ -239,31 +239,31 @@
               <div class="col-sm-3">
                 <div class="form-group">
                   <label>Last Indent Date</label>
-                    <input type="text" class="form-control" placeholder="Enter Last Indent Date">
+                    <input type="text" class="form-control" ng-model="last_indent" placeholder="Enter Last Indent Date">
                 </div>
                 <div class="form-group">
                   <label>Last Receipt Date</label>
-                    <input type="text" class="form-control" placeholder="Enter Last Receipt Date">
+                    <input type="text" class="form-control" ng-model="last_rec_date" placeholder="Enter Last Receipt Date">
                 </div>
                 <div class="form-group">
                   <label>Issue Date</label>
-                    <input type="text" class="form-control" placeholder="Enter Issue Date">
+                    <input type="text" class="form-control" ng-model="issue_date" placeholder="Enter Issue Date">
                 </div>
               </div>
               <div class="col-sm-3">
                 <div class="form-group">
                   <label>Supplier Name </label>
-                    <input type="text" class="form-control" placeholder="Enter Supplier Name">
+                    <input type="text" class="form-control" ng-model="supp_name" placeholder="Enter Supplier Name">
                 </div>
                 <div class="form-group">
                   <label>Rate</label>
-                    <input type="text" class="form-control" placeholder="Enter Rate">
+                    <input type="text" class="form-control" ng-model="rate" placeholder="Enter Rate">
                 </div>
                 <div class="form-group ">
                   <label>Status </label>
                   <br>
                   <label class="i-checks">
-                    <input class="" type="checkbox" checked ><i></i> Active
+                    <input class="" type="checkbox" ng-model="supp_status" checked ><i></i> Active
                   </label>
                 </div>
               </div>
@@ -273,7 +273,7 @@
         <br>
         <div class="row">
           <div class="form-group col-md-offset-5">
-          <button class="btn btn-primary">Save</button>
+          <button class="btn btn-primary" ng-click="saveData()">Save</button>
           <button class="btn btn-info">Cancel</button>
           </div>
         </div>
