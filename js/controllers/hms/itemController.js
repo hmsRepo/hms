@@ -110,7 +110,40 @@ app.controller('itemController', ['$scope','$controller','$http','$localStorage'
             {costcenter: 'LOUNGE BAR', select: 'Y',  Default: ''},
             {costcenter: 'BANQUET KITCHEN', select: 'Y',  Default: ''}
         ];
-	
+	 
+
+        // Save Item data
+        $scope.userObj=[];
+        $scope.saveData=function(){
+            var full_data={
+                'item_code':$scope.item_code,
+                'item_name':$scope.item_name,
+                'item_stock':$scope.item_stock,
+                'group':$scope.group.selected,
+                'subGroup':$scope.subGroup.selected,
+                'uom':$scope.UOM.selected,
+                'factor':$scope.con_factor,
+                'con_uom':$scope.ConvUOM.selected,
+                'rec_uom':$scope.RECPUOM.selected,
+                'last_indent':$scope.last_indent,
+                'last_rec_date':$scope.last_rec_date,
+                'issue_date':$scope.issue_date,
+                'supp_name':$scope.supp_name,
+                'rate':$scope.rate,
+                'supp_status':$scope.supp_status,
+                'multiple':$scope.userObj
+            };
+
+             $http({
+                method : "POST",
+                url : "",
+                data: full_data
+              }).then(function mySucces(response) {
+                  console.log(response);
+              }, function myError(response) {
+                console.log(response);
+              });  
+        }
 
 }]);
 app.directive('focusMe', function () {
