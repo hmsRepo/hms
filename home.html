@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <style type="text/css">
+    	.page-header{
+    		margin: 25px 0 10px;
+    	}
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Admin - ABCIE</a>
+            </div>
+            <!-- /.navbar-top-links -->
+			<div class="sidebar-bg">
+				<div class="navbar-default sidebar" role="navigation" style="background-color: #fff !important;">
+					<div class="sidebar-nav navbar-collapse">
+						<ul class="nav in" id="side-menu">
+							<li>
+								<a onclick="changeContent('first','Admin')" class="activeClass" href="#">
+								Create Channel</a>
+							</li>
+							<li>
+								<a onclick="changeContent('second','Admin')" href="#">Invite Peers</a>
+							</li>
+							<li>
+								<a onclick="changeContent('third','Admin')" href="#">Install Chaincode</a>
+							</li>
+							<li>
+								<a onclick="changeContent('fourth','Admin')" href="#" class="">Instantiate Chaincode</a>
+							</li>
+							<li>
+								<a onclick="changeContent('five','DAPP')" href="#">Create BOE</a>
+							</li>
+							<li>
+								<a onclick="changeContent('six','DAPP')" href="#">Update BOE</a>
+							</li>
+							<li>
+								<a onclick="changeContent('sevan','DAPP')" href="#" class="">View BOE</a>
+							</li>
+						</ul>
+					</div>
+					<!-- /.sidebar-collapse -->
+				</div>
+			</div>
+            <!-- /.navbar-static-side -->
+        </nav>
+        <div id="page-wrapper">
+			<div class="first">
+				<div class="row">
+					<div class="col-lg-12 col-md-4">
+						<h3 class="page-header">Create Channel</h3>
+					</div>
+				</div>
+				<div id="main-content">
+					<div class="row">
+						<form class="form-horizontal" id="form-channel">
+						  <div class="form-group">
+							<label class="control-label col-md-2" for="name">Channel Name</label>
+							<div class="col-md-3">
+							  <input type="text" class="form-control" name="channel_name" placeholder="Enter Channel Name">
+							</div>
+						  </div>
+						  <div class="form-group">
+							<label class="control-label col-md-2" for="config">Config</label>
+							<div class="col-md-3"> 
+							  <input type="text" class="form-control" name="config_name" placeholder="Enter Config">
+							</div>
+						  </div>
+						  <div class="form-group">
+							<div class="col-md-offset-2 col-md-10">
+							  <button type="button" class="btn common_btn" onclick="createChannel()" >Create Channel</button>
+							</div>
+						  </div>
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<div class="second">
+				<div class="row">
+					<div class="col-lg-12">
+						<h3 class="page-header">Invite Peers</h3>
+					</div>
+				</div>
+				<div id="main-content">
+					<div class="row">
+						<form class="form-horizontal" id="form-invitepeers">
+						  <div class="form-group">
+							<label class="control-label col-md-2" for="channel_name">Channel Name</label>
+							<div class="col-md-3">
+							  <input type="text" class="form-control" name="channel_name" id="channel_name" placeholder="Enter Channel Name">
+							</div>
+						  </div>
+						  <div class="form-group">
+							<label class="control-label col-md-2" for="peers">Peers</label>
+							<div class="col-md-3"> 
+							  <input type="text" class="form-control" name="peers" id="peers" placeholder="Enter Peers">
+							</div>
+						  </div>
+						  <div class="form-group"> 
+							<div class="col-md-offset-2 col-md-10">
+							  <button type="button" class="btn common_btn" onclick="invitePeers()">Invite Peers</button>
+							</div>
+						  </div>
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<div class="third">
+				<div class="row">
+					<div class="col-lg-12">
+						<h3 class="page-header">Install Chaincode</h3>
+					</div>
+				</div>
+				<div id="main-content">
+					<div class="row">
+						<form class="form-horizontal" id="form-chaincode">
+						  <div class="form-group">
+							<label class="control-label col-md-2" for="peers">Peers</label>
+							<div class="col-md-3"> 
+							  <input type="text" class="form-control" name="peers" id="peers" placeholder="Enter Peers">
+							</div>
+						  </div>
+							<div class="form-group">
+								<label class="control-label col-md-2" for="chaincode">Chaincode</label>
+								<div class="col-md-3">
+								  <input type="text" class="form-control" name="chaincode" id="chaincode"  placeholder="Enter chaincode">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-md-2" for="cc_path">CC Path</label>
+								<div class="col-md-3">
+								  <input type="text" class="form-control" name="cc_path" id="cc_path"  placeholder="Enter cc path">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-md-2" for="language">Language</label>
+								<div class="col-md-3">
+								  <input type="text" class="form-control" name="language" id="language" placeholder="Enter language">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-md-2" for="version">Version</label>
+								<div class="col-md-3">
+								  <input type="text" class="form-control" name="version" id="version"  placeholder="Enter Version">
+								</div>
+							</div>
+						  <div class="form-group"> 
+							<div class="col-md-offset-2 col-md-10">
+							  <button type="submit" class="btn common_btn" onclick="installChaincode()">Install Chaincode</button>
+							</div>
+						  </div>
+						</form>
+					</div>
+				</div>
+			</div>
+			
+			<div class="fourth">
+				<div class="row">
+					<div class="col-lg-12">
+						<h3 class="page-header">Instantiate Chaincode</h3>
+					</div>
+				</div>
+				<div id="main-content">
+					<div class="row">
+						<form class="form-horizontal" id="form-instantiate">
+							<div class="form-group">
+								<label class="control-label col-md-2" for="cc_name">CC Name</label>
+								<div class="col-md-3"> 
+								<input type="text" class="form-control" name="cc_name" id="cc_name" placeholder="Enter CC Name">
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<label class="control-label col-md-2" for="version">Version</label>
+								<div class="col-md-3">
+								  <input type="text" class="form-control" name="version" id="version" placeholder="Enter Version">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-md-2" for="language">Language</label>
+								<div class="col-md-3">
+								  <input type="text" class="form-control" name="language" id="language" placeholder="Enter language">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-md-2" for="args">Args</label>
+								<div class="col-md-3">
+								  <input type="text" class="form-control" name="args_name" id="args_name" placeholder="Enter Args">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-md-2" for="peers">Peers</label>
+								<div class="col-md-3">
+								  <input type="text" class="form-control" name="peers" id="peers" placeholder="Enter Peers">
+								</div>
+							</div>
+						  <div class="form-group"> 
+							<div class="col-md-offset-2 col-md-10">
+							  <button type="button" class="btn common_btn" onclick="initaiateFunc()">Instantiate</button>
+							</div>
+						  </div>
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<div class="five">
+				<div class="row">
+					<div class="col-lg-12">
+						<h3 class="page-header">DAP - ABCIE</h3>
+					</div>
+				</div>
+				<div id="main-content">
+					<form class="form-horizontal" id="form-createBOE">
+						<div class="row">
+							<div class="col-sm-6 col-md-6 col-lg-6">
+								<div class="form-group">
+									<label class="control-label col-md-4" for="number">Number</label>
+									<div class="col-md-7"> 
+										<input type="text" class="form-control" placeholder="Enter Number" name="boe_number">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-4" for="code">Port Code</label>
+									<div class="col-md-7">
+									  <input type="text" class="form-control" name="port_code" placeholder="Enter Port Code" > 
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-4" for="date">Date</label>
+									<div class="col-md-7">
+									  <input type="text" class="form-control" name="boe_date" placeholder="Enter Date">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-4" for="import">Importer Name</label>
+									<div class="col-md-7">
+									  <input type="text" class="form-control" name="importer_name" placeholder="Enter Importer Name">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-4" for="address">Address</label>
+									<div class="col-md-7">
+									  <input type="text" class="form-control" name="boe_address" placeholder="Enter Address">
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="control-label col-md-4" for="i_code">Importer Code</label>
+									<div class="col-md-7">
+									  <input type="text" class="form-control" name="boe_importer_code" placeholder="Enter Importer Code">
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6 col-md-6 col-lg-6">
+								<div class="form-group">
+									<label class="control-label col-md-4" for="Date">Date</label>
+									<div class="col-md-7">
+									  <input type="text" class="form-control" name="boe_date" placeholder="Enter Date">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-4" for="Number">Number</label>
+									<div class="col-md-7">
+									  <input type="text" class="form-control" name="boe_number" placeholder="Enter Number">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-4" for="address">Recap Number</label>
+									<div class="col-md-7">
+									  <input type="text" class="form-control" name="Recap_Number" placeholder="Enter Recap Number">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-4" for="Number">Recap Amount</label>
+									<div class="col-md-7">
+									  <input type="text" class="form-control" name="Recap_Amount" placeholder="Enter Recap Amount">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-4" for="ORM">ORM Not Settled</label>
+									<div class="col-md-7">
+									  <input type="text" class="form-control" name="ORM" placeholder="Enter ORM">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-group"> 
+							<div class="col-md-offset-2 col-md-3" >
+								<button type="button" class="btn common_btn" onclick="createBOE()">Create BOE</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+
+			<div class="six">
+				<div class="row">
+					<div class="col-lg-12">
+						<h3 class="page-header">DAPP - ABCIE</h3>
+					</div>
+				</div>
+				<div id="main-content">
+					<form class="form-horizontal" id="form-updateBOE">
+						<div class="row">
+							<div class="col-sm-6 col-md-6 col-lg-6">
+								<div class="form-group">
+									<label class="control-label col-md-4" for="number">Number</label>
+									<div class="col-md-7"> 
+										<input type="text" class="form-control" placeholder="Enter Number" name="boe_number">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-4" for="code">Port Code</label>
+									<div class="col-md-7">
+									  <input type="text" class="form-control" name="port_code" placeholder="Enter Port Code" > 
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-4" for="date">Date</label>
+									<div class="col-md-7">
+									  <input type="text" class="form-control" name="boe_date" placeholder="Enter Date">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-4" for="import">Importer Name</label>
+									<div class="col-md-7">
+									  <input type="text" class="form-control" name="importer_name" placeholder="Enter Importer Name">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-4" for="address">Address</label>
+									<div class="col-md-7">
+									  <input type="text" class="form-control" name="boe_address" placeholder="Enter Address">
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="control-label col-md-4" for="i_code">Importer Code</label>
+									<div class="col-md-7">
+									  <input type="text" class="form-control" name="boe_importer_code" placeholder="Enter Importer Code">
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6 col-md-6 col-lg-6">
+								<div class="form-group">
+									<label class="control-label col-md-4" for="Date">Date</label>
+									<div class="col-md-7">
+									  <input type="text" class="form-control" name="boe_date" placeholder="Enter Date">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-4" for="Number">Number</label>
+									<div class="col-md-7">
+									  <input type="text" class="form-control" name="boe_number" placeholder="Enter Number">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-4" for="address">Recap Number</label>
+									<div class="col-md-7">
+									  <input type="text" class="form-control" name="Recap_Number" placeholder="Enter Recap Number">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-4" for="Number">Recap Amount</label>
+									<div class="col-md-7">
+									  <input type="text" class="form-control" name="Recap_Amount" placeholder="Enter Recap Amount">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-4" for="ORM">ORM Not Settled</label>
+									<div class="col-md-7">
+									  <input type="text" class="form-control" name="ORM" placeholder="Enter ORM">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-group"> 
+							<div class="col-sm-offset-2 col-sm-3">
+								<button type="button" class="btn common_btn" onclick="updateBOE()">Update BOE</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+
+			<div class="sevan">
+				<div class="row">
+					<div class="col-lg-12">
+						<h3 class="page-header">DAPP - ABCIE</h3>
+					</div>
+				</div>
+				<div id="main-content">
+					<form class="form-horizontal" id="form-viewBOE">
+						<div class="row">
+							<div class="col-sm-6 col-md-6 col-lg-6">
+								<div class="form-group">
+									<label class="control-label col-md-4" for="number">Number</label>
+									<div class="col-md-7"> 
+										<input type="text" class="form-control" placeholder="Enter Number" name="boe_number">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-4" for="code">Port Code</label>
+									<div class="col-md-7">
+									  <input type="text" class="form-control" name="port_code" placeholder="Enter Port Code" > 
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-4" for="date">Date</label>
+									<div class="col-md-7">
+									  <input type="text" class="form-control" name="boe_date" placeholder="Enter Date">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-4" for="import">Importer Name</label>
+									<div class="col-md-7">
+									  <input type="text" class="form-control" name="importer_name" placeholder="Enter Importer Name">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-4" for="address">Address</label>
+									<div class="col-md-7">
+									  <input type="text" class="form-control" name="boe_address" placeholder="Enter Address">
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="control-label col-md-4" for="i_code">Importer Code</label>
+									<div class="col-md-7">
+									  <input type="text" class="form-control" name="boe_importer_code" placeholder="Enter Importer Code">
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6 col-md-6 col-lg-6">
+								<div class="form-group">
+									<label class="control-label col-md-4" for="Date">Date</label>
+									<div class="col-md-7">
+									  <input type="text" class="form-control" name="boe_date" placeholder="Enter Date">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-4" for="Number">Number</label>
+									<div class="col-md-7">
+									  <input type="text" class="form-control" name="boe_number" placeholder="Enter Number">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-4" for="address">Recap Number</label>
+									<div class="col-md-7">
+									  <input type="text" class="form-control" name="Recap_Number" placeholder="Enter Recap Number">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-4" for="Number">Recap Amount</label>
+									<div class="col-md-7">
+									  <input type="text" class="form-control" name="Recap_Amount" placeholder="Enter Recap Amount">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-4" for="ORM">ORM Not Settled</label>
+									<div class="col-md-7">
+									  <input type="text" class="form-control" name="ORM" placeholder="Enter ORM">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-group"> 
+							<div class="col-sm-offset-2 col-sm-3">
+								<button type="button" class="btn common_btn" onclick="finish()" >Submit</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			
+        </div>
+        <!-- /#page-wrapper -->
+    </div>
+</body>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/index.js"></script>
+<script src="js/home.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(".fa.arrow").closest("[href='#']").on("click", function(){
+		  $(".active").removeClass("active");
+		  $(".in").removeClass("in");
+		  $(this).addClass("active");
+		  $(".nav-second-level").slideToggle( 300 )
+		  $(this).closest("li").find(".nav-second-level").slideToggle( 300 )
+		})
+		<!-- $('#page-wrapper').load('views/create-channel.html'); -->
+			$('.first').show();
+			$('.second').hide();
+			$('.third').hide();
+			$('.fourth').hide();
+			$('.five').hide();
+			$('.six').hide();
+			$('.sevan').hide();
+
+		$('.sidebar-nav li a').click(function(){
+			$('.sidebar-nav li a').removeClass('activeClass');
+			$(this).addClass('activeClass');
+		});
+	})
+</script>
+</html>
